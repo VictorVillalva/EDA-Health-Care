@@ -1,0 +1,42 @@
+.namePag{
+    width: 186px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+.copyrigth{
+    width: 186px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+}
+.contact, .support{
+    width: 186px;
+}
+.contactanos, .soporte{
+    height:21px;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+.contacts, .supports{
+    margin: .3rem 0rem 0rem 0rem;
+    display: block;
+    font-size: .9rem;
+    color: #000000;
+}
+

@@ -1,0 +1,31 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.headerPage{
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+.titlePage{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+.options{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.option{
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
