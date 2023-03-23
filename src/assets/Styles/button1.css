@@ -1,0 +1,16 @@
+.button1{
+    width: 186px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 0.3px solid rgba(92, 92, 92, 0.7);
+    border-radius: 20px;
+    color: #F71735;
+    font-weight: 600;
+    box-sizing: border-box;
+}
+.button1:hover{
+    color: #FFFFFF;
+    border: transparent;
+    background: #FA6579;
+    transition: .5s;
+}
