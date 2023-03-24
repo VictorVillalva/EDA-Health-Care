@@ -1,19 +1,19 @@
+//Components
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import SignUpForm from "../components/SignUpForm.jsx";
-import '../assets/Styles/userSignUp.css';
+import FormSignUp from "../components/FormSignUp.jsx";
+import React from 'react'
+//css
+import '../assets/Styles/formSignUp.css';
 
-const UserSignUp = () => {
+const SignUp = () => {
     return (
-
         <>
             <section className='headerIndex'>
                 <div className="container">
+                    <div className="row"><Header /></div>
                     <div className="row">
-                        <Header />
-                    </div>
-                    <div className="row">
-                        <SignUpForm />
+                        <FormSignUp />
                         <div className="col-6 information">
                             <span className='title-1'>La felicidad es</span>
                             <span className='title-1'>una buena salud</span>
@@ -23,7 +23,6 @@ const UserSignUp = () => {
                     </div>
                 </div>
             </section>
-
             <section className='footerIndex'>
                 <div className="container">
                     <div className="row footerCenter">
@@ -32,8 +31,7 @@ const UserSignUp = () => {
                 </div>
             </section>
         </>
-
     )
 }
 
-export default UserSignUp;
+export default SignUp;

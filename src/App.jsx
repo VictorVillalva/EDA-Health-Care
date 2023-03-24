@@ -2,7 +2,7 @@ import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
 
 //Pages
 import Index from './pages/Index';
-import UserSignUp from "./pages/UserSignUp.jsx";
+import SignUp from "./pages/SignUp.jsx";
 
 function App() {
 
@@ -13,7 +13,7 @@ function App() {
                 <Routes>
                     <Route index element={<Index/>}/>
                     <Route path={'/home'} element={<Index/>}/>
-                    <Route path={'/signUp'} element={<UserSignUp/>}/>
+                    <Route path={'/signUp'} element={<SignUp/>}/>
                 </Routes>
             </BrowserRouter>
         </>

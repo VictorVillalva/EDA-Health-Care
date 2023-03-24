@@ -55,15 +55,13 @@
     border-radius: 3px;
 }
 
-.register-form button[type="submit"] {
+.entrar-btn {
     display: block;
     margin: 20px auto 0;
     padding: 10px 20px;
     font-size: 16px;
     border: none;
     border-radius: 3px;
-    background-color: #0066cc;
-    color: #fff;
     cursor: pointer;
 }
 
@@ -78,3 +76,7 @@
     padding: 5px;
     margin-bottom: 10px;
 }
+.components-form{
+    width: 100%;
+}
+
