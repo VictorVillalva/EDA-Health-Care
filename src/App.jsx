@@ -3,7 +3,7 @@ import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
 //Pages
 import Index from './pages/Index';
 import SignUp from "./pages/SignUp.jsx";
-import DiagnosticButton from "./Atom/DiagnosticButton.jsx";
+import DiagnosticButton from "./Atom/ButtonDiagnostic.jsx";
 
 function App() {
 
