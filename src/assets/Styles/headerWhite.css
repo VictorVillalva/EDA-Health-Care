@@ -14,7 +14,7 @@ a {
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
-    color: #FFFFFF;
+    color: black;
 }
 .options {
     display: flex;
@@ -29,5 +29,5 @@ a {
     display: flex;
     align-items: center;
     text-align: center;
-    color: #FFFFFF;
+    color: black;
 }

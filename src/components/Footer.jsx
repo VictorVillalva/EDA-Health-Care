@@ -12,11 +12,11 @@ const Footer = () => {
       <div className="row">
         <div className="col-2"></div>
         <div className="col-2 copy">
-            <span className='namePag'> 
+            <span className='namePag'>
             <img src={logo} alt="" />
             Health Care
             </span>
-            <span className='copyrigth'>©Healthcare2023 </span>
+            <span className='copyright'>©Healthcare2023 </span>
         </div>
         <div className="col-2"></div>
         <div className="col-2 contact">

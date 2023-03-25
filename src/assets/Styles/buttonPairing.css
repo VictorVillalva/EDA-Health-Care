@@ -1,4 +1,4 @@
-.diagnostic-btn {
+.pairing-btn {
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -6,6 +6,7 @@
 
 .base-btn {
     border: none;
+
     padding: 0;
     position: relative;
     background-color: transparent;

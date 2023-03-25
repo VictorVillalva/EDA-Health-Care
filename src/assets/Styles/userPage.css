@@ -1,0 +1,53 @@
+.headerUserPage {
+    height: 250px;
+}
+
+.user {
+    display: flex;
+    position: relative;
+    padding-left: 100px;
+    padding-top: 20px;
+}
+
+.buttons {
+    top: -150px;
+    left: 300px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 10px 0;
+    position: relative;
+}
+
+.health-status {
+    display: inline-block;
+
+}
+
+.btn {
+    width: 50px;
+    height: 50px;
+    margin: 0 20px;
+}
+
+.btn:first-child {
+    margin-right: 30px;
+}
+
+.btn:last-child {
+    margin-left: 30px;
+}
+
+.separator {
+    margin: 0;
+    border: none;
+    height: 2px;
+    background-color: black;
+    /* Add any other styles as desired */
+}
+
+.health-status-component {
+    display: flex;
+    justify-content: center;
+}
