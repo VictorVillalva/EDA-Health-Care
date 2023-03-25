@@ -64,3 +64,15 @@ border-radius: 15px;
 .segundaLink{
     margin-bottom: 104px;
 }
+.alerta-login{
+    padding: .5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    border-radius: 10px;
+}
+.alerta-login-descripcion{
+    color: #F9F9F9;
+}
