@@ -30,7 +30,7 @@ function FormSignUp(props) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // Do something with formData
+        // a
     };
 
     return (
