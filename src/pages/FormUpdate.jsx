@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import TextForm from "../atoms/TextForm";
 import InputForm from "../atoms/InputForm";
 import Button2 from "../molecules/Button2";
-import '../assets/Styles/form-update.css'
+import '../assets/Styles/form-update.css';
 
-const FormUpdate = ({ patient, onSave }) => {
+const FormUpdate = ({ patient, onSubmit }) => {
     const [firstName, setFirstName] = useState(patient.firstName);
     const [lastName, setLastName] = useState(patient.lastName);
     const [weight, setWeight] = useState(patient.weight);
@@ -16,7 +16,7 @@ const FormUpdate = ({ patient, onSave }) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        onSave({
+        onSubmit({
             firstName,
             lastName,
             weight,
@@ -33,48 +33,48 @@ const FormUpdate = ({ patient, onSave }) => {
                     <TextForm
                         text="Nombre"
                     ></TextForm>
-                    <InputForm type="text" text2="on"></InputForm>
+                    <InputForm type="text" name={"firstName"} value={firstName} onChange={(e) => setFirstName(e.target.value)}></InputForm>
                 </div>
                 <div className="form-update-data-container2">
                     <TextForm
                         text="Apellido"
                     ></TextForm>
-                    <InputForm type="text"></InputForm>
+                    <InputForm type="text" name={"lastName"} value={lastName} onChange={(e) => setLastName(e.target.value)}></InputForm>
                 </div>
                 <div className="form-update-data-container3">
                     <TextForm
                         text="Peso (kg)"
                     ></TextForm>
-                    <InputForm type="number"></InputForm>
+                    <InputForm type="number" name={"weight"}  value={weight} onChange={(e) => setWeight(e.target.value)}></InputForm>
                 </div>
                 <div className="form-update-data-container4">
                     <TextForm
                         text="Altura (m)"
                     ></TextForm>
-                    <InputForm type="number"></InputForm>
+                    <InputForm type="number" name={"height"}  value={height} onChange={(e) => setHeight(e.target.value)}></InputForm>
                 </div>
                 <div className="form-update-data-container5">
                     <TextForm
                         text="Número Telefónico "
                     ></TextForm>
-                    <InputForm type="tel" text2="tel"></InputForm>
+                    <InputForm type="tel" name={"phone"}  value={phone} onChange={(e) => setPhone(e.target.value)}></InputForm>
                 </div>
                 <div className="form-update-data-container6">
                     <TextForm
                         text="Correo Electronico"
                     ></TextForm>
-                    <InputForm type='email' text2="email"></InputForm>
+                    <InputForm type='email' name={"email"}  value={email} onChange={(e) => setEmail(e.target.value)}></InputForm>
                 </div>
                 <div className="form-update-data-container7">
                     <TextForm
                         text="Contraseña"
                     ></TextForm>
-                    <InputForm type="password" ></InputForm>
+                    <InputForm type="password" name={"password"}  value={password} onChange={(e) => setPassword(e.target.value)} ></InputForm>
                 </div>
-                <Button2 text="Actualizar" ></Button2>
+                <Button2 type="submit" text="Actualizar"></Button2>
             </div>
         </form>
     )
-}
+};
 
 export default FormUpdate;
