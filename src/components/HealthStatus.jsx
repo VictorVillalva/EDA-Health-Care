@@ -2,6 +2,7 @@ import React from 'react';
 import '../assets/Styles/healthStatus.css';
 import userIcon from '../assets/Images/user_black.png';
 import shareIcon from '../assets/Images/share.png';
+import {useState} from "react";
 
 const Checkmark = () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check" viewBox="0 0 16 16">
@@ -16,18 +17,26 @@ const Xmark = () => (
 );
 
 const HealthStatus = () => {
+
+    const [headache, setHeadache] = useState(true);
+    const [earBuzzing, setEarBuzzing] = useState(null);
+    const [epigastricPain, setEpigastricPain] = useState(null);
+
     return (
-        <div className="vital-signs-container">
-            <img className="user-icon" src={userIcon} alt="User Icon" />
-            <div className="vital-signs">
-                <span className="vital-signs-title">Signos Vitales:</span>
-                <span className="vital-signs-item">Dolor de Cabeza:<Checkmark /></span>
-                <span className="vital-signs-item">Zumbido de Oido:<Xmark /></span>
-                <span className="vital-signs-item">Dolor en el Epigastrio:<Checkmark /></span>
+        <>
+            <div className="vital-signs-container">
+                <img className="user-icon" src={userIcon} alt="User Icon" />
+                <div className="vital-signs">
+                    <span className="vital-signs-title">Signos Vitales:</span>
+                    <span className="vital-signs-item">Dolor de Cabeza:{headache === true && <Checkmark />} {headache === false && <Xmark />}</span>
+                    <span className="vital-signs-item">Zumbido de Oido:{earBuzzing === true && <Checkmark />} {earBuzzing === false && <Xmark />}</span>
+                    <span className="vital-signs-item">Dolor en el Epigastrio:{epigastricPain === true && <Checkmark />} {epigastricPain === false && <Xmark />}</span>
+                </div>
+                <button className="share-button"><img className="share-icon" src={shareIcon} alt="Share Icon" /></button>
             </div>
-            <button className="share-button"><img className="share-icon" src={shareIcon} alt="Share Icon" /></button>
-        </div>
+        </>
     );
 };
 
 export default HealthStatus;
+
