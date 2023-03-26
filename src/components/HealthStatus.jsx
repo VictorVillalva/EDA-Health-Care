@@ -18,7 +18,7 @@ const Xmark = () => (
 
 const HealthStatus = () => {
 
-    const [headache, setHeadache] = useState(true);
+    const [headache, setHeadache] = useState(null);
     const [earBuzzing, setEarBuzzing] = useState(null);
     const [epigastricPain, setEpigastricPain] = useState(null);
 

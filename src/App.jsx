@@ -1,10 +1,8 @@
 import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
-
 //Pages
 import Index from './pages/Index';
 import SignUp from "./pages/SignUp.jsx";
 import UserPage from "./pages/UserPage.jsx";
-import HealthStatus from "./components/HealthStatus.jsx";
 
 function App() {
 
