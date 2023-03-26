@@ -1,0 +1,20 @@
+.text-form-container {
+    display: flex;
+    position: relative;
+}
+.text-form-text {
+    width: 100%;
+    display: flex;
+}
+.text-form {
+    color: #5c5c5c;
+    display: flex;
+    font-size: 16px;
+    position: relative;
+    font-style: normal;
+    text-align: left;
+    align-items: center;
+    font-family: 'Poppins';
+    font-weight: 500px;
+    line-height: 24px;
+}

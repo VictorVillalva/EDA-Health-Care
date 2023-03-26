@@ -1,0 +1,16 @@
+.input-form-container {
+    display: flex;
+    position: relative;
+}
+.input-form-input {
+    width: 100%;
+}
+.input-form {
+    width: 100%;
+    border: 0.3px solid rgba(92,92,92,0.7);
+    height: 45px;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: white (Gray);
+}
