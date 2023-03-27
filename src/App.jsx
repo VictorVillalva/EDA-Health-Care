@@ -1,11 +1,12 @@
 //Pages
-import FormUpdateData from './pages/FormUpdate';
+import FormUpdateData from './organismo/FormUpdatePatient';
+import DoctorDetails from './pages/DoctorDetails';
 import Index from './pages/Index';
 import PatientDetails from './pages/PatientDetails';
 
 
 function App() {
-  <PatientDetails />
+  <DoctorDetails />
 }
 
 export default App;

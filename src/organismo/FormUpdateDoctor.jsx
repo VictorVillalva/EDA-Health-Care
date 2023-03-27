@@ -5,22 +5,20 @@ import InputForm from "../atoms/InputForm";
 import Button2 from "../molecules/Button2";
 import '../assets/Styles/form-update.css';
 
-const FormUpdate = ({ patient, onSubmit }) => {
-    const [firstName, setFirstName] = useState(patient.firstName);
-    const [lastName, setLastName] = useState(patient.lastName);
-    const [weight, setWeight] = useState(patient.weight);
-    const [height, setHeight] = useState(patient.height);
-    const [phone, setPhone] = useState(patient.phone);
-    const [email, setEmail] = useState(patient.email);
-    const [password, setPassword] = useState(patient.password);
+const FormUpdateDoctor = ({ doctor, onSubmit }) => {
+    const [firstName, setFirstName] = useState(doctor.firstName);
+    const [lastName, setLastName] = useState(doctor.lastName);
+    const [ident, setIdent] = useState(doctor.ident);
+    const [phone, setPhone] = useState(doctor.phone);
+    const [email, setEmail] = useState(doctor.email);
+    const [password, setPassword] = useState(doctor.password);
 
     const handleSubmit = (event) => {
         event.preventDefault();
         onSubmit({
             firstName,
             lastName,
-            weight,
-            height,
+            ident,
             phone,
             email,
             password
@@ -28,7 +26,7 @@ const FormUpdate = ({ patient, onSubmit }) => {
     };
     return (
         <form className="form-update-data-container" onSubmit={handleSubmit}>
-            <div className="form-update-data-form-patient-data">
+            <div className="form-update-data-form-data">
                 <div className="form-update-data-container1">
                     <TextForm
                         text="Nombre"
@@ -43,33 +41,27 @@ const FormUpdate = ({ patient, onSubmit }) => {
                 </div>
                 <div className="form-update-data-container3">
                     <TextForm
-                        text="Peso (kg)"
+                        text="Cedula Profesional"
                     ></TextForm>
-                    <InputForm type="number" name={"weight"}  value={weight} onChange={(e) => setWeight(e.target.value)}></InputForm>
-                </div>
-                <div className="form-update-data-container4">
-                    <TextForm
-                        text="Altura (m)"
-                    ></TextForm>
-                    <InputForm type="number" name={"height"}  value={height} onChange={(e) => setHeight(e.target.value)}></InputForm>
+                    <InputForm type="number" name={"ident"} value={ident} onChange={(e) => setIdent(e.target.value)}></InputForm>
                 </div>
                 <div className="form-update-data-container5">
                     <TextForm
                         text="Número Telefónico "
                     ></TextForm>
-                    <InputForm type="tel" name={"phone"}  value={phone} onChange={(e) => setPhone(e.target.value)}></InputForm>
+                    <InputForm type="tel" name={"phone"} value={phone} onChange={(e) => setPhone(e.target.value)}></InputForm>
                 </div>
                 <div className="form-update-data-container6">
                     <TextForm
                         text="Correo Electronico"
                     ></TextForm>
-                    <InputForm type='email' name={"email"}  value={email} onChange={(e) => setEmail(e.target.value)}></InputForm>
+                    <InputForm type='email' name={"email"} value={email} onChange={(e) => setEmail(e.target.value)}></InputForm>
                 </div>
                 <div className="form-update-data-container7">
                     <TextForm
                         text="Contraseña"
                     ></TextForm>
-                    <InputForm type="password" name={"password"}  value={password} onChange={(e) => setPassword(e.target.value)} ></InputForm>
+                    <InputForm type="password" name={"password"} value={password} onChange={(e) => setPassword(e.target.value)} ></InputForm>
                 </div>
                 <Button2 type="submit" text="Actualizar"></Button2>
             </div>
@@ -77,4 +69,4 @@ const FormUpdate = ({ patient, onSubmit }) => {
     )
 };
 
-export default FormUpdate;
+export default FormUpdateDoctor;

@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
-import FormUpdate from '../organismo/FormUpdatePatient';
+import FormUpdateDoctor from '../organismo/FormUpdateDoctor';
 
-const PatientDetails = () => {
+const DoctorDetails = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [editing, setEditing] = useState(false);
 
     //Datos para probar que esto funciona
-    const [patient, setPatient] = useState({
+    const [doctor, setDoctor] = useState({
         firstName: 'Juan',
         lastName: 'Pérez',
-        weight: 80,
-        height: 1.8,
+        ident: '80197369433',
         phone: '+1234567890',
         email: 'juan.perez@example.com',
         password: 'password123'
@@ -20,13 +19,13 @@ const PatientDetails = () => {
         setEditing(true);
     };
 
-    const handleSave = (newPatient) => {
+    const handleSave = (newDoctor) => {
         // Aquí se podría enviar la información actualizada del paciente al servidor
         // mediante una llamada a una API
 
         setEditing(false);
-        setPatient(newPatient);
-        console.log('Datos actualizados del paciente:', newPatient);
+        setDoctor(newDoctor);
+        console.log('Datos actualizados del paciente:', newDoctor);
     };
 
     const toggleShowPassword = () => {
@@ -40,8 +39,7 @@ const PatientDetails = () => {
                     <tr>
                         <th>Nombre</th>
                         <th>Apellido</th>
-                        <th>Peso (kg)</th>
-                        <th>Altura (m)</th>
+                        <th>Cedula Profesional (kg)</th>
                         <th>Numero Telefonico</th>
                         <th>Correo Electronico</th>
                         <th>Contraseña</th>
@@ -49,16 +47,12 @@ const PatientDetails = () => {
                 </thead>
                 <tbody>
                     <tr>
-                        <td>{patient.firstName}</td>
-                        <td>{patient.lastName}</td>
-                        <td>{patient.weight}</td>
-                        <td>{patient.height}</td>
-                        <td>{patient.phone}</td>
-                        <td>{patient.email}</td>
-                        <td>{showPassword ? patient.password : '********'}</td>
-                        <td>
-
-                        </td>
+                        <td>{doctor.firstName}</td>
+                        <td>{doctor.lastName}</td>
+                        <td>{doctor.ident}</td>
+                        <td>{doctor.phone}</td>
+                        <td>{doctor.email}</td>
+                        <td>{showPassword ? doctor.password : '********'}</td>
                         <td>
                             <button onClick={toggleShowPassword}>
                                 {showPassword ? 'Ocultar contraseñas' : 'Mostrar contraseñas'}
@@ -68,7 +62,7 @@ const PatientDetails = () => {
                 </tbody>
             </table>
             {editing ? (
-                <FormUpdate patient={patient} onSubmit={handleSave} />
+                <FormUpdateDoctor doctor={doctor} onSubmit={handleSave} />
             ) : (
                 <button onClick={handleEdit}>Editar datos</button>
             )}
@@ -76,4 +70,4 @@ const PatientDetails = () => {
     );
 };
 
-export default PatientDetails;
+export default DoctorDetails;

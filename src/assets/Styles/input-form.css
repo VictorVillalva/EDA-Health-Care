@@ -1,9 +1,11 @@
 .input-form-container {
     display: flex;
     position: relative;
+    
 }
 .input-form-input {
     width: 100%;
+    padding-left: 10px;
 }
 .input-form {
     width: 100%;
@@ -13,4 +15,5 @@
     box-sizing: border-box;
     border-radius: 15px;
     background-color: white (Gray);
+    
 }
