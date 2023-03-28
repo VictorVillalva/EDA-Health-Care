@@ -1,0 +1,17 @@
+.image {
+    width: auto;
+    height: auto;
+    position: relative;
+    align-self: center;
+    object-fit:cover;
+    display: flex;
+}
+
+.image-2 {
+    width: auto;
+    height: auto;
+    position: relative;
+    align-self: center;
+    object-fit: cover;
+    display: flex;
+}

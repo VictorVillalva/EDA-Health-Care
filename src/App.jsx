@@ -4,9 +4,13 @@ import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
 import FormLogin from './components/FormLogin';
 
 //Pages
+import FormUpdateData from './organismo/FormUpdatePatient';
+import DoctorDetails from './pages/DoctorDetails';
 import Index from './pages/Index';
+import PatientDetails from './pages/PatientDetails';
 import SignUp from "./pages/SignUp.jsx";
 import UserPage from "./pages/UserPage.jsx";
+
 
 function App() {
 

@@ -22,28 +22,33 @@ const Index = () => {
           <div className="col-6">
             <img src={doc} alt="" id='imageIndexConfi'/>
           </div>
-          <div className="col-6 information">
-            <span className='title-index'>TU SALUD SIEMPRE ES</span>
-            <span className='title-index'>NUESTRA NECESIDAD</span>
-            <p className='description'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam ratione explicabo magnam, fuga delectus in eveniet aut libero praesentium pariatur excepturi quis sapiente nisi, aspernatur voluptates soluta ullam, ipsa omnis?</p>
-            <button className='button-index'>Iniciar</button>
+          <div className="row">
+            <div className="col-6">
+              <img src={doc} alt="" />
+            </div>
+            <div className="col-6 information">
+              <span className='title-index'>TU SALUD SIEMPRE ES</span>
+              <span className='title-index'>NUESTRA NECESIDAD</span>
+              <p className='description'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam ratione explicabo magnam, fuga delectus in eveniet aut libero praesentium pariatur excepturi quis sapiente nisi, aspernatur voluptates soluta ullam, ipsa omnis?</p>
+              <button className='button-index'>Iniciar</button>
+            </div>
           </div>
         </div>
-      </div>
 
-    </section>
-    <section className='mainIndex'>
-      <div className="container">
-        <div className="row why1">
-          <div className="col-6">
-            <img src={why} alt="" id='image-main'/>
+      </section>
+      <section className='mainIndex'>
+        <div className="container">
+          <div className="row why1">
+            <div className="col-6">
+              <img src={why} alt="" id='image-main' />
+            </div>
+            <div className="col-1"></div>
+            <div className="col-4">
+              <span className='information-1'>¿Por que es importante revisarse?</span>
+              <p className='information-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores dicta vitae omnis quisquam exercitationem rem culpa at, explicabo possimus tenetur, non magnam aliquam labore, error eveniet laudantium voluptas aperiam enim.</p>
+            </div>
+            <div className="col-1"></div>
           </div>
-          <div className="col-1"></div>
-          <div className="col-4">
-            <span className='information-1'>¿Por que es importante revisarse?</span>
-            <p className='information-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores dicta vitae omnis quisquam exercitationem rem culpa at, explicabo possimus tenetur, non magnam aliquam labore, error eveniet laudantium voluptas aperiam enim.</p>
-          </div>
-          <div className="col-1"></div>
         </div>
       </div>
     </section>
@@ -59,15 +64,14 @@ const Index = () => {
             <img src={emer} alt="" id='imageIndex2'/>
           </div>
         </div>
-      </div>
-    </section>
-    <section className='footerIndex'>
-      <div className="container">
-        <div className="row footerCenter">
-          <Footer />
+      </section>
+      <section className='footerIndex'>
+        <div className="container">
+          <div className="row footerCenter">
+            <Footer />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     </>
   )
 }

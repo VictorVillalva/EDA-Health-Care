@@ -1,0 +1,27 @@
+.main {
+    width: 1200px;
+    height: var(--dl-size-size-maxwidth);
+    display: block;
+    background-color: #ffffff;
+}
+
+
+
+.container-0 {
+    gap: var(--dl-space-space-halfunit);
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+.before-table-patient-2 {
+    width: auto;
+    height: auto;
+    display: flex;
+    position: relative;
+    justify-items: center;
+    flex-direction: column;
+}
