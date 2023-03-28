@@ -5,24 +5,24 @@ a {
     text-decoration: none;
 }
 
-.headerPage {
+.headerPageBlack {
     height: 70px;
     display: flex;
     align-items: center;
 }
-.titlePage {
+.titlePageBlack {
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
     color: black;
 }
-.options {
+.optionsBlack {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.option {
+.optionBlack {
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
@@ -30,4 +30,66 @@ a {
     align-items: center;
     text-align: center;
     color: black;
+}
+
+/*Media Querys*/
+@media (max-width: 576px){
+    .titlePageBlack{
+        font-size: 100%;
+    }
+    .optionBlack{
+        font-size: 75%;
+    }
+    #logoHealthCareBlack{
+        display: none;
+    }
+    #imgUserHeader{
+        width:80%;
+        height:80%;
+    }
+}
+@media (min-width:577px) and (max-width:768px){
+    .titlePageBlck{
+        font-size: 100%;
+    }
+    .optionBlack{
+        font-size: 75%;
+    }
+    #logoHealthCareBlack{
+        display: none;
+    }
+    #imgUserHeader{
+        width:80%;
+        height:80%;
+    }
+}
+@media (min-width:769px) and (max-width:992px){
+    .titlePageBlack{
+        font-size: 100%;
+    }
+    .optionBlack{
+        font-size: 75%;
+    }
+    #logoHealthCareBlack{
+        display: none;
+    }
+    #imgUserHeaderBlack{
+        width:80%;
+        height:80%;
+    }
+}
+@media (min-width:993px) and (max-width:1279px){
+    .titlePageBlack{
+        font-size: 100%;
+    }
+    .optionBlack{
+        font-size: 100%;
+    }
+    #logoHealthCareBlack{
+        display: none;
+    }
+    #imgUserHeaderBlack{
+        width:80%;
+        height:80%;
+    }
 }

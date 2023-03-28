@@ -9,18 +9,18 @@ const Header = () => {
     return (
         <>
             <div className="container">
-                <div className="row headerPage">
+                <div className="row headerPageBlack">
                     <div className="col-1"></div>
                     <div className="col-2">
-                        <img src={logo} alt="" />
-                        <span className='titlePage'>HealthCare</span>
+                        <img src={logo} alt="" id='logoHealthCareBlack'/>
+                        <span className='titlePageBlack'>HealthCare</span>
                     </div>
                     <div className="col-5"></div>
                     <div className="col-3">
                         <nav className='options'>
-                            <a href="" className='option'>Inicio</a>
-                            <a href="" className='option'>Servicio</a>
-                            <a href="" className='option'><img src={user}/></a>
+                            <a href="" className='optionBlack'>Inicio</a>
+                            <a href="" className='optionBlack'>Servicio</a>
+                            <a href="" className='optionBlack'><img src={user} id='imgUserHeaderBlack'/></a>
                         </nav>
                     </div>
                 </div>

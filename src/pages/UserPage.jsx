@@ -1,14 +1,17 @@
+//hooks
 import React, { useState, useEffect } from 'react';
-import Footer from '../components/Footer';
-import HeaderWhite from "../components/HeaderWhite.jsx";
-import UserImageAndName from "../components/UserImageAndName.jsx";
+//CSS
 import '../assets/Styles/userPage.css';
+//COMPONENTES
 import ButtonDiagnostic from "../Atom/ButtonDiagnostic.jsx";
 import ButtonPairing from "../Atom/ButtonPairing.jsx";
 import HealthStatus from "../components/HealthStatus.jsx";
+import Footer from '../components/Footer';
+import HeaderWhite from "../components/HeaderWhite.jsx";
+import UserImageAndName from "../components/UserImageAndName.jsx";
 
 function UserPage(props) {
-    const [userData, setUserData] = useState({});
+    const [userData, setUserData] = useState('');
 
     // useEffect(() => {
     //     fetch('https://example-api.com/user-data')
@@ -20,7 +23,9 @@ function UserPage(props) {
         <>
             <section className='headerUserPage'>
                 <div className="container">
-                    <div className="row"><HeaderWhite /></div>
+                    <div className="row">
+                        <HeaderWhite />
+                    </div>
                 </div>
                 <div className="user">
                     <UserImageAndName name={userData.name} imageSrc={userData.imageSrc} />
@@ -30,11 +35,9 @@ function UserPage(props) {
                     <ButtonPairing className="btn" />
                 </div>
             </section>
-
             <hr className="separator" />
-
             <section className="userContent">
-                <div className="container">
+                <div className="container userContentContainer">
                     <div className="health-status">
                         <span>Estatus de Salud</span>
                         <div className="health-status-component">
@@ -43,7 +46,7 @@ function UserPage(props) {
                     </div>
                 </div>
             </section>
-
+            <hr className="separator" />
             <section className='footerIndex'>
                 <div className="container">
                     <div className="row footerCenter">

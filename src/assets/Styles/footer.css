@@ -49,6 +49,7 @@
     .copy{
         width: 100%;
         display: flex;
+        justify-content: space-between;
     }
     .contact{
         margin-top: 5%;
@@ -63,7 +64,6 @@
         align-items: center;
     }
     .namePag{
-        width: 100%;
         font-size: 100%;
     }
     .copyrigth{
@@ -86,6 +86,7 @@
     .copy{
         width: 100%;
         display: flex;
+        justify-content: space-between;
     }
     .contact{
         margin-top: 5%;
@@ -100,7 +101,6 @@
         align-items: center;
     }
     .namePag{
-        width: 100%;
         font-size: 100%;
     }
     .copyrigth{
@@ -122,6 +122,7 @@
     .copy{
         width: 100%;
         display: flex;
+        justify-content: space-between;
     }
     .contact{
         margin-top: 5%;
@@ -136,7 +137,6 @@
         align-items: center;
     }
     .namePag{
-        width: 100%;
         font-size: 100%;
     }
     .copyrigth{

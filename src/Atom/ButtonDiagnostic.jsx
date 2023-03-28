@@ -3,9 +3,9 @@ import '../assets/Styles/buttonDiagnostic.css';
 const Button = () => {
     return (
         <>
-            <div className="button-container">
-                <span className="button-text">Realizar Diagnostico</span>
-                <button className="base-btn">
+            <div className="button-container-diagnostic">
+                <span className="button-text-diagnostic">Realizar Diagnostico</span>
+                <button className="base-btn-diagnostic">
                     <img src="src/assets/Images/buttonDiagnostic.png" className="diagnostic-btn" alt="Button Image"/>
                 </button>
             </div>

@@ -2,7 +2,7 @@
 import Facebook from '../assets/Images/Facebook.svg';
 import Instagram from '../assets/Images/Instagram.svg';
 import Phone from '../assets/Images/Phone.svg';
-import Mail from '../assets/Images/Mail.svg';
+import MailBlack from '../assets/Images/MailBlack.svg';
 import logo from '../assets/Images/carbon_apple_red.svg';
 //CSS
 import '../assets/Styles/footer.css';
@@ -31,7 +31,7 @@ const Footer = () => {
                 <img src={Instagram} alt="" />  @HealthCare
             </a>
             <a href="" className="contacts">
-                <img src={Mail} alt="" />  HC@hotmail.com
+                <img src={MailBlack} alt="" />  HC@hotmail.com
             </a>
         </div>
         <div className="col-2 support">
