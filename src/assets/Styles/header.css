@@ -1,26 +1,28 @@
-*{
+* {
     font-family: 'Poppins', sans-serif;
 }
-a{
+a {
     text-decoration: none;
 }
-.headerPage{
+
+.headerPage {
     height: 70px;
     display: flex;
     align-items: center;
 }
-.titlePage{
+.titlePage {
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
     color: #FFFFFF;
 }
-.options{
+.options {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.option{
+
+.option {
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
@@ -29,3 +31,67 @@ a{
     text-align: center;
     color: #FFFFFF;
 }
+
+
+/*Media Querys*/
+@media (max-width: 576px){
+    .titlePage{
+        font-size: 100%;
+    }
+    .option{
+        font-size: 75%;
+    }
+    #logoHealthCare{
+        display: none;
+    }
+    #imgUserHeader{
+        width:80%;
+        height:80%;
+    }
+}
+@media (min-width:577px) and (max-width:768px){
+    .titlePage{
+        font-size: 100%;
+    }
+    .option{
+        font-size: 75%;
+    }
+    #logoHealthCare{
+        display: none;
+    }
+    #imgUserHeader{
+        width:80%;
+        height:80%;
+    }
+}
+@media (min-width:769px) and (max-width:992px){
+    .titlePage{
+        font-size: 100%;
+    }
+    .option{
+        font-size: 75%;
+    }
+    #logoHealthCare{
+        display: none;
+    }
+    #imgUserHeader{
+        width:80%;
+        height:80%;
+    }
+}
+@media (min-width:993px) and (max-width:1279px){
+    .titlePage{
+        font-size: 100%;
+    }
+    .option{
+        font-size: 100%;
+    }
+    #logoHealthCare{
+        display: none;
+    }
+    #imgUserHeader{
+        width:80%;
+        height:80%;
+    }
+}
+

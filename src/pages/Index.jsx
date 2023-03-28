@@ -13,10 +13,14 @@ const Index = () => {
 
   return (
     <>
-      <section className='headerIndex'>
-        <div className="container">
-          <div className="row">
-            <Header />
+    <section className='headerIndex'>
+      <div className="container">
+        <div className="row">
+          <Header />
+        </div>
+        <div className="row">
+          <div className="col-6">
+            <img src={doc} alt="" id='imageIndexConfi'/>
           </div>
           <div className="row">
             <div className="col-6">
@@ -46,18 +50,18 @@ const Index = () => {
             <div className="col-1"></div>
           </div>
         </div>
-      </section>
-      <section className='mainIndex2'>
-        <div className="container">
-          <div className="row emergency">
-            <div className="col-1"></div>
-            <div className="col-4 emergencyInfo">
-              <span className='information-3'>¿Que hacer en caso de emergencia?</span>
-              <p className='information-4'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat dolore eaque est! Et placeat eligendi delectus voluptatem quaerat accusamus quis. Dolorum quo quas quae vitae rem expedita ad a maxime!</p>
-            </div>
-            <div className="col-7">
-              <img src={emer} alt="" />
-            </div>
+      </div>
+    </section>
+    <section className='mainIndex2'>
+      <div className="container">
+        <div className="row emergency">
+          <div className="col-1"></div>
+          <div className="col-4 emergencyInfo">
+            <span className='information-3'>¿Que hacer en caso de emergencia?</span>
+            <p className='information-4'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat dolore eaque est! Et placeat eligendi delectus voluptatem quaerat accusamus quis. Dolorum quo quas quae vitae rem expedita ad a maxime!</p>
+          </div>
+          <div className="col-7">
+            <img src={emer} alt="" id='imageIndex2'/>
           </div>
         </div>
       </section>

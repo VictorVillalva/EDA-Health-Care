@@ -1,0 +1,70 @@
+.diagnostico-form {
+    background-color: #F9F9F9;
+    padding: 20px 50px;
+    border-radius: 5px;
+    width: 90%;
+    margin: auto;
+}
+
+.diagnostico-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.diagnostico-form hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+.diagnostico-form label {
+    margin-bottom: 10px;
+}
+
+.diagnostico-form input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #D9D9D9;
+    border: 2px solid #F9F9F9;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 100px;
+    margin-right: 8px
+}
+
+.diagnostico-form input[type="checkbox"]:checked {
+    background-color: #fa6579;
+}
+
+.diagnostico-form .form-group div {
+    display: block;
+    justify-content: center;
+    margin-bottom: 25px;
+    margin-left: 100px;
+}
+
+
+.diagnostico-form button[type="submit"] {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 186px;
+    height: 40px;
+    background: #ffffff;
+    border: 0.3px solid rgba(92, 92, 92, 0.7);
+    border-radius: 20px;
+    color: #f71735;
+    font-weight: 600;
+    box-sizing: border-box;
+}
+
+.diagnostico-form button[type="submit"]:hover {
+    color: #ffffff;
+    border: transparent;
+    background: #fa6579;
+    transition: 0.5s;
+}

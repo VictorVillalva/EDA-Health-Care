@@ -1,14 +1,20 @@
-.headerIndex{
+.headerIndex {
     height: 714px;
     background: linear-gradient(88.06deg, #FDB8C1 -23.57%, #F83953 98.81%);
 }
-.information{
+
+.headerUserPage {
+    height: 714px;
+}
+
+.information {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.title-index{
+
+.title-index {
     font-size: 3rem;
     font-weight: 600;
     color: #FFFFFF;
@@ -17,7 +23,8 @@
     text-align: center;
     line-height: 3.5rem;
 }
-.description{
+
+.description {
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.4rem;
@@ -26,7 +33,8 @@
     text-align: justify;
     color: #FFFFFF;
 }
-.button-index{
+
+.button-index {
     margin: 29px 0px 0px 0px;
     height: 40px;
     width: 186px;
@@ -35,17 +43,20 @@
     border-color: transparent;
     color: #FFFFFF;
 }
-.button-index:hover{
+
+.button-index:hover {
     transition: 1s;
     background:#FFFFFF;
     color: #F71735;
 }
-.mainIndex{
+
+.mainIndex {
     height: 600px;
     display: flex;
     align-items: center;
 }
-.information-1{
+
+.information-1 {
     width: 396px;
     height: 96px;
     font-weight: 500;
@@ -56,27 +67,29 @@
     text-align: center;
     color: #000000;
 }
-.information-2{
+
+.information-2 {
     margin: 1rem 0rem 0rem 0rem;
     width: 396px;
     display: flex;
     align-items: center;
     text-align: justify;
 }
-
 .mainIndex2{
     height: 500px;
     background: linear-gradient(88.14deg, #FDB8C1 -23.56%, #F83953 98.97%);
     display: flex;
     align-items: center;
 }
-.emergencyInfo{
+
+.emergencyInfo {
     height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.information-3{
+
+.information-3 {
     width: 392px;
     height: 108px;
     font-weight: 500;
@@ -87,7 +100,8 @@
     text-align: center;
     color: #FFFFFF;
 }
-.information-4{
+
+.information-4 {
     margin: 1rem 0rem 0rem 0rem;
     width: 392px;
     display: flex;
@@ -95,11 +109,268 @@
     text-align: justify;
     color: #FFFFFF;
 }
-.footerIndex{
+
+.footerIndex {
     height: 250px;
 }
-.footerCenter{
+
+.footerCenter {
     height: 250px;
     display: flex;
    align-items: center;
+}
+
+/*Media Querys*/
+@media (max-width: 576px){
+    .headerIndex{
+        height: 100%;
+    }
+    .title-index{
+        font-size: 100%;
+        line-height: 100%;
+    }
+    #imageIndexConfi{
+        width: 100%;
+        height: 100%;
+    }
+    .description{
+        font-size: 70%;
+        line-height: 100%;
+    }
+    .button-index{
+        margin: 5px 0px 0px 0px;
+        height: 40px;
+        width: 186px;
+    }
+    .mainIndex{
+        height: 100%;
+    }
+    .information-1{
+        margin-top: 20px;
+        width: 100%;
+        font-size: 70%;
+        line-height: 100%;
+        height: auto;
+    }
+    .information-2{
+        width: 100%;
+        font-size: 70%;
+        margin-bottom: 30px;
+    }
+    #image-main{
+        width: 100%;
+        height: 100%;
+    }
+    .mainIndex2{
+        height: 100%;
+    }
+    .emergencyInfo{
+        height: 100%;
+    }
+    .information-3{
+        margin-top: 5px;
+        width: 100%;
+        height: 100%;
+        font-size: 100%;
+        line-height: 100%;
+    }
+    .information-4{
+        margin: .5rem 0rem 0rem 0rem;
+        width: 100%;
+        font-size: 70%;
+    }
+    #imageIndex2{
+        width: 100%;
+        height: 100%;
+    }
+}
+@media (min-width:577px) and (max-width:768px){
+    .headerIndex{
+        height: 100%;
+    }
+    .title-index{
+        font-size: 100%;
+        line-height: 100%;
+    }
+    #imageIndexConfi{
+        width: 100%;
+        height: 100%;
+    }
+    .description{
+        font-size: 70%;
+        line-height: 100%;
+
+    }
+    .button-index{
+        margin: 5px 0px 0px 0px;
+        height: 40px;
+        width: 186px;
+    }
+    .mainIndex{
+        height: 100%;
+    }
+    .information-1{
+        margin-top: 20px;
+        width: 100%;
+        font-size: 70%;
+        line-height: 100%;
+        height: auto;
+    }
+    .information-2{
+        width: 100%;
+        font-size: 70%;
+        margin-bottom: 30px;
+    }
+    #image-main{
+        width: 100%;
+        height: 100%;
+    }
+    .mainIndex2{
+        height: 100%;
+    }
+    .emergencyInfo{
+        height: 100%;
+    }
+    .information-3{
+        margin-top: 5px;
+        width: 100%;
+        height: 100%;
+        font-size: 100%;
+        line-height: 100%;
+    }
+    .information-4{
+        margin: .5rem 0rem 0rem 0rem;
+        width: 100%;
+        font-size: 70%;
+    }
+    #imageIndex2{
+        width: 100%;
+        height: 100%;
+    }
+}
+@media (min-width:769px) and (max-width:992px){
+    .headerIndex{
+        height: 100%;
+    }
+    .title-index{
+        font-size: 100%;
+        line-height: 100%;
+    }
+    #imageIndexConfi{
+        width: 100%;
+        height: 100%;
+    }
+    .description{
+        font-size: 100%;
+        line-height: 100%;
+    }
+    .button-index{
+        margin: 5px 0px 0px 0px;
+        height: 40px;
+        width: 186px;
+    }
+    .mainIndex{
+        height: 100%;
+    }
+    .information-1{
+        margin-top: 20px;
+        width: 100%;
+        font-size: 70%;
+        line-height: 100%;
+        height: auto;
+    }
+    .information-2{
+        width: 100%;
+        font-size: 70%;
+        margin-bottom: 30px;
+    }
+    #image-main{
+        width: 100%;
+        height: 100%;
+    }
+    .mainIndex2{
+        height: 100%;
+    }
+    .emergencyInfo{
+        height: 100%;
+    }
+    .information-3{
+        margin-top: 30%;
+        width: 100%;
+        height: 100%;
+        font-size: 100%;
+        line-height: 100%;
+    }
+    .information-4{
+        margin: .5rem 0rem 0rem 0rem;
+        width: 100%;
+        font-size: 70%;
+    }
+    #imageIndex2{
+        width: 100%;
+        height: 100%;
+    }
+}
+@media (min-width:993px) and (max-width:1279px){
+    .headerIndex{
+        height: 100%;
+    }
+    .title-index{
+        font-size: 200%;
+        line-height: 100%;
+    }
+    #imageIndexConfi{
+        width: 100%;
+        height: 100%;
+    }
+    .description{
+        font-size: 100%;
+        line-height: 100%;
+    }
+    .button-index{
+        margin: 5px 0px 0px 0px;
+        height: 40px;
+        width: 186px;
+    }
+    .mainIndex{
+        height: 100%;
+    }
+    .information-1{
+        margin-top: 20px;
+        width: 100%;
+        font-size: 100%;
+        line-height: 100%;
+        height: auto;
+    }
+    .information-2{
+        width: 100%;
+        font-size: 100%;
+        margin-bottom: 30px;
+    }
+    #image-main{
+        width: 100%;
+        height: 100%;
+    }
+    .mainIndex2{
+        height: 100%;
+    }
+    .emergencyInfo{
+        height: 100%;
+    }
+    .information-3{
+        margin-top: 30%;
+        width: 100%;
+        height: 100%;
+        font-size: 100%;
+        line-height: 100%;
+    }
+    .information-4{
+        margin: .5rem 0rem 0rem 0rem;
+        width: 100%;
+        font-size: 100%;
+    }
+    #imageIndex2{
+        width: 100%;
+        height: 100%;
+    }
 }

@@ -1,4 +1,4 @@
-.namePag{
+.namePag {
     width: 186px;
     font-weight: 600;
     font-size: 20px;
@@ -9,7 +9,8 @@
     text-align: center;
     color: #000000;
 }
-.copyrigth{
+
+.copyright {
     width: 186px;
     font-weight: 400;
     font-size: 14px;
@@ -19,10 +20,11 @@
     align-items: center;
     color: #000000;
 }
-.contact, .support{
+.contact, .support {
     width: 186px;
 }
-.contactanos, .soporte{
+
+.contactanos, .soporte {
     height:21px;
     font-weight: 500;
     font-size: 1rem;
@@ -33,10 +35,126 @@
     text-align: center;
     color: #000000;
 }
-.contacts, .supports{
+
+.contacts, .supports {
     margin: .3rem 0rem 0rem 0rem;
     display: block;
     font-size: .9rem;
     color: #000000;
+}
+
+
+/*Media Querys*/
+@media (max-width: 576px){
+    .copy{
+        width: 100%;
+        display: flex;
+    }
+    .contact{
+        margin-top: 5%;
+        margin-bottom: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .support{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .namePag{
+        width: 100%;
+        font-size: 100%;
+    }
+    .copyrigth{
+        width: 100%;
+    }
+    .contact, .support{
+        width: 100%;
+    }
+    .contactanos, .soporte{
+        font-size: 100%;
+        height: 100%;
+        line-height: 100%;
+    }
+    .contacts, .supports{
+        font-size: 80%;
+    }
+
+}
+@media (min-width:577px) and (max-width:768px){
+    .copy{
+        width: 100%;
+        display: flex;
+    }
+    .contact{
+        margin-top: 5%;
+        margin-bottom: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .support{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .namePag{
+        width: 100%;
+        font-size: 100%;
+    }
+    .copyrigth{
+        width: 100%;
+    }
+    .contact, .support{
+        width: 100%;
+    }
+    .contactanos, .soporte{
+        font-size: 100%;
+        height: 100%;
+        line-height: 100%;
+    }
+    .contacts, .supports{
+        font-size: 80%;
+    }
+}
+@media (min-width:769px) and (max-width:992px){
+    .copy{
+        width: 100%;
+        display: flex;
+    }
+    .contact{
+        margin-top: 5%;
+        margin-bottom: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .support{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .namePag{
+        width: 100%;
+        font-size: 100%;
+    }
+    .copyrigth{
+        width: 100%;
+    }
+    .contact, .support{
+        width: 100%;
+    }
+    .contactanos, .soporte{
+        font-size: 100%;
+        height: 100%;
+        line-height: 100%;
+    }
+    .contacts, .supports{
+        font-size: 80%;
+    }
+}
+@media (min-width:993px) and (max-width:1279px){
+/*Aqui queda como 1280px*/
 }
 
