@@ -14,3 +14,17 @@
     background: #FA6579;
     transition: .5s;
 }
+
+/*Media Querys*/
+@media (max-width: 576px){
+
+}
+@media (min-width:577px) and (max-width:768px){
+
+}
+@media (min-width:769px) and (max-width:992px){
+
+}
+@media (min-width:993px) and (max-width:1279px){
+
+}

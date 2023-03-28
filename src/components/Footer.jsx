@@ -13,8 +13,8 @@ const Footer = () => {
         <div className="col-2"></div>
         <div className="col-2 copy">
             <span className='namePag'> 
-            <img src={logo} alt="" />
-            Health Care
+            <img src={logo} alt="" id='logoHealthCare'/>
+            HealthCare
             </span>
             <span className='copyrigth'>©Healthcare2023 </span>
         </div>

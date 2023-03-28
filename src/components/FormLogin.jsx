@@ -27,8 +27,6 @@ const FormLogin = () => {
   return (
     <div className='container'>
         <div className="row">
-            <div className="col-6">
-            </div>
             <div className="col-5 columnasForm">
                 <form action="" 
                 className='formLogin' 
@@ -64,7 +62,6 @@ const FormLogin = () => {
                     </div>
                 </form>
             </div>
-            <div className="col-1"></div>
         </div>
     </div>
   )

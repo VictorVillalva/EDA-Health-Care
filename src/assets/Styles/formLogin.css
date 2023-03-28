@@ -10,7 +10,7 @@
     flex-direction: column;
     align-items: center;
     background: #F9F9F9;
-border-radius: 15px;
+    border-radius: 15px;
 }
 .opt{
     display: block;
@@ -20,7 +20,8 @@ border-radius: 15px;
     display: flex;
     align-items: center;   
     color: #5C5C5C;
-}.primerOpt{
+}
+.primerOpt{
     margin-top: 52px;
 }
 .answer{
@@ -75,4 +76,73 @@ border-radius: 15px;
 }
 .alerta-login-descripcion{
     color: #F9F9F9;
+}
+
+/*Media Querys*/
+@media (max-width: 576px){
+    .formLogin{
+        width: 395px;
+        height: 400px;
+    }
+    .componentes{
+        height: 100%;
+        width: 80%;
+    }
+    .answer{
+        width: 100%;
+    }
+    .columnasForm{
+        width: 1000px;
+        display: flex;
+        justify-content: center;
+    }
+}
+@media (min-width:577px) and (max-width:768px){
+    .formLogin{
+        width: 395px;
+        height: 400px;
+    }
+    .componentes{
+        height: 100%;
+        width: 80%;
+    }
+    .answer{
+        width: 100%;
+    }
+    .columnasForm{
+        width: 1000px;
+        display: flex;
+        justify-content: center;
+    }
+}
+@media (min-width:769px) and (max-width:992px){
+    .formLogin{
+        width: 395px;
+        height: 400px;
+    }
+    .componentes{
+        height: 100%;
+        width: 80%;
+    }
+    .answer{
+        width: 100%;
+    }
+    .columnasForm{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+@media (min-width:993px) and (max-width:1279px){
+    .formLogin{
+        width: 395px;
+        height: 400px;
+    }
+    .componentes{
+        height: 100%;
+        width: 80%;
+    }
+    .answer{
+        width: 100%;
+    }
 }
