@@ -16,7 +16,7 @@ const Footer = () => {
             <img src={logo} alt="" id='logoHealthCare'/>
             HealthCare
             </span>
-            <span className='copyrigth'>©Healthcare2023 </span>
+            <span className='copyright'>©Healthcare2023 </span>
         </div>
         <div className="col-2"></div>
         <div className="col-2 contact">

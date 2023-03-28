@@ -1,4 +1,4 @@
-.namePag{
+.namePag {
     width: 186px;
     font-weight: 600;
     font-size: 20px;
@@ -9,7 +9,8 @@
     text-align: center;
     color: #000000;
 }
-.copyrigth{
+
+.copyright {
     width: 186px;
     font-weight: 400;
     font-size: 14px;
@@ -19,10 +20,11 @@
     align-items: center;
     color: #000000;
 }
-.contact, .support{
+.contact, .support {
     width: 186px;
 }
-.contactanos, .soporte{
+
+.contactanos, .soporte {
     height:21px;
     font-weight: 500;
     font-size: 1rem;
@@ -33,12 +35,14 @@
     text-align: center;
     color: #000000;
 }
-.contacts, .supports{
+
+.contacts, .supports {
     margin: .3rem 0rem 0rem 0rem;
     display: block;
     font-size: .9rem;
     color: #000000;
 }
+
 
 /*Media Querys*/
 @media (max-width: 576px){
