@@ -31,3 +31,67 @@ a {
     text-align: center;
     color: #FFFFFF;
 }
+
+
+/*Media Querys*/
+@media (max-width: 576px){
+    .titlePage{
+        font-size: 100%;
+    }
+    .option{
+        font-size: 75%;
+    }
+    #logoHealthCare{
+        display: none;
+    }
+    #imgUserHeader{
+        width:80%;
+        height:80%;
+    }
+}
+@media (min-width:577px) and (max-width:768px){
+    .titlePage{
+        font-size: 100%;
+    }
+    .option{
+        font-size: 75%;
+    }
+    #logoHealthCare{
+        display: none;
+    }
+    #imgUserHeader{
+        width:80%;
+        height:80%;
+    }
+}
+@media (min-width:769px) and (max-width:992px){
+    .titlePage{
+        font-size: 100%;
+    }
+    .option{
+        font-size: 75%;
+    }
+    #logoHealthCare{
+        display: none;
+    }
+    #imgUserHeader{
+        width:80%;
+        height:80%;
+    }
+}
+@media (min-width:993px) and (max-width:1279px){
+    .titlePage{
+        font-size: 100%;
+    }
+    .option{
+        font-size: 100%;
+    }
+    #logoHealthCare{
+        display: none;
+    }
+    #imgUserHeader{
+        width:80%;
+        height:80%;
+    }
+}
+

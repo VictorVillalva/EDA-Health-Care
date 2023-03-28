@@ -1,4 +1,8 @@
 import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
+
+//Prueba Componentes
+import FormLogin from './components/FormLogin';
+
 //Pages
 import Index from './pages/Index';
 import SignUp from "./pages/SignUp.jsx";
@@ -7,7 +11,6 @@ import UserPage from "./pages/UserPage.jsx";
 function App() {
 
   return (
-
         <>
             <BrowserRouter>
                 <Routes>
@@ -18,6 +21,7 @@ function App() {
                 </Routes>
             </BrowserRouter>
         </>
+
   )
 }
 
