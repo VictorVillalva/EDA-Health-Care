@@ -20,7 +20,7 @@ const Index = () => {
         </div>
         <div className="row">
           <div className="col-6">
-            <img src={doc} alt="" />
+            <img src={doc} alt="" id='imageIndexConfi'/>
           </div>
           <div className="col-6 information">
             <span className='title-index'>TU SALUD SIEMPRE ES</span>
@@ -56,7 +56,7 @@ const Index = () => {
             <p className='information-4'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat dolore eaque est! Et placeat eligendi delectus voluptatem quaerat accusamus quis. Dolorum quo quas quae vitae rem expedita ad a maxime!</p>
           </div>
           <div className="col-7">
-            <img src={emer} alt="" />
+            <img src={emer} alt="" id='imageIndex2'/>
           </div>
         </div>
       </div>
