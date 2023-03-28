@@ -1,5 +1,6 @@
 import React from 'react';
 import '../assets/Styles/formSignUp.css';
+import '../assets/Styles/formLogin.css';
 import ButtonEntrar from "../Atom/ButtonEntrar.jsx";
 import {useState} from "react";
 
@@ -19,6 +20,8 @@ function FormSignUp(props) {
         tieneDoctor: false,
     });
 
+    const [error, setError] = useState(false);
+
     const handleInputChange = (event) => {
         const { name, value, type, checked } = event.target;
         const newValue = type === 'checkbox' ? checked : value;
@@ -31,11 +34,18 @@ function FormSignUp(props) {
     const handleSubmit = (event) => {
         event.preventDefault();
         // a
+        //Validacion de Fornulario
+        // if([formData.nombre,formData.altura,formData.apellidos,formData.genero,formData.email,formData.contrasena,formData.peso,formData.telefono,formData.tieneDoctor,formData.fechaNacimiento].includes('')){ //Includes verifica
+        //     console.log('Hay campos vacios')
+        //     setError(true);
+        //     return
+        // }
+        // setError(false);
     };
 
     return (
         <>
-            <div className="col-6">
+            <div className="col-6 formSingUp">
                 <form className="register-form" onSubmit={handleSubmit}>
                     <div className="components-form">
                         <label htmlFor="nombre">Nombre:</label>
@@ -59,7 +69,7 @@ function FormSignUp(props) {
                         />
 
                         <label>Género:</label>
-                        <div>
+                        <div className='generos'>
                             <label htmlFor="masculino">
                                 <input
                                     type="checkbox"
@@ -156,6 +166,11 @@ function FormSignUp(props) {
                                 />
                             </label>
                         </div>
+                        {error && (
+                            <div className='alerta-login'>
+                                <span className='alerta-login-descripcion'>Todos los campos son obligatorios</span>
+                            </div>
+                        )}
                         <div className="submit-button">
                             <ButtonEntrar buttonText="Registrarse" />
                         </div>

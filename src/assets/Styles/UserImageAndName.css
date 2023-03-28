@@ -37,3 +37,44 @@
 .user-name {
     font-size: 1.5rem;
 }
+
+/*Media Querys*/
+@media (max-width: 576px){
+    .user-image{
+        height: 100%;
+    }
+    .user-name{
+        margin-left: 5%;
+    }
+    .welcome{
+        font-size: 100%;
+        margin-left: 10%;
+    }
+}
+@media (min-width:577px) and (max-width:768px){
+    .user-image{
+        height: 100%;
+    }
+    .user-name{
+        margin-left: 5%;
+    }
+    .welcome{
+        font-size: 100%;
+        margin-left: 10%;
+    }
+}
+@media (min-width:769px) and (max-width:992px){
+    .user-image{
+        height: 100%;
+    }
+    .user-name{
+        margin-left: 5%;
+    }
+    .welcome{
+        font-size: 100%;
+        margin-left: 10%;
+    }
+}
+@media (min-width:993px) and (max-width:1279px){
+/*Queda igual que 1280px*/
+}

@@ -1,14 +1,18 @@
 .headerUserPage {
     height: 250px;
 }
-
+.userContent{
+    height: 700px;
+}
+.userContentContainer{
+    margin-top: 5%;
+}
 .user {
     display: flex;
     position: relative;
     padding-left: 100px;
     padding-top: 20px;
 }
-
 .buttons {
     top: -150px;
     left: 300px;
@@ -19,26 +23,21 @@
     padding: 10px 0;
     position: relative;
 }
-
 .health-status {
     display: inline-block;
 
 }
-
 .btn {
     width: 50px;
     height: 50px;
     margin: 0 20px;
 }
-
 .btn:first-child {
     margin-right: 30px;
 }
-
 .btn:last-child {
     margin-left: 30px;
 }
-
 .separator {
     margin: 0;
     border: none;
@@ -46,8 +45,45 @@
     background-color: black;
     /* Add any other styles as desired */
 }
-
 .health-status-component {
     display: flex;
     justify-content: center;
+}
+
+/*Media Querys*/
+@media (max-width: 576px){
+    .buttons{
+        left: 30%;
+        width: 30%;
+    }
+    .userContent{
+        width: 100%;
+    }
+}
+@media (min-width:577px) and (max-width:768px){
+    .buttons{
+        left: 30%;
+        width: 20%;
+    }
+    .userContent{
+        width: 100%;
+    }
+}
+@media (min-width:769px) and (max-width:992px){
+    .buttons{
+        left: 30%;
+        width: 20%;
+    }
+    .userContent{
+        width: 100%;
+    }
+}
+@media (min-width:993px) and (max-width:1279px){
+    .buttons{
+        left: 30%;
+        width: 20%;
+    }
+    .userContent{
+        width: 100%;
+    }
 }
