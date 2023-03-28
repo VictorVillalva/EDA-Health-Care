@@ -52,6 +52,9 @@
 
 /*Media Querys*/
 @media (max-width: 576px){
+    .user{
+        padding-left: 5%;
+    }
     .buttons{
         left: 30%;
         width: 30%;
@@ -59,8 +62,14 @@
     .userContent{
         width: 100%;
     }
+    .health-status{
+        width: 100%;
+    }
 }
 @media (min-width:577px) and (max-width:768px){
+    .user{
+        padding-left: 5%;
+    }
     .buttons{
         left: 30%;
         width: 20%;
