@@ -3,16 +3,13 @@
 }
 
 .button2-button2 {
-    color: rgba(247, 23, 53, 1);
-    width: 100%;
+    width: auto;
     height: 40px;
     display: flex;
-    padding: 0px;
     position: relative;
     font-size: 16px;
     text-align: center;
     align-items: center;
-    font-family: 'Poppins';
     line-height: 24px;
     border-color: rgba(92, 92, 92, 0.7);
     border-width: .3px;
@@ -23,11 +20,11 @@
 
 .button2-text {
     color: rgb(247, 23, 53);
-    width: 83;
+    width: auto;
     height: 24;
     font-size: 16px;
     text-align: center;
-    font-family: Poppins;
+    font-family: 'Poppins';
     line-height: 24px;
 }
 
@@ -35,7 +32,7 @@
     top: 634px;
     left: 155px;
     height: 40px;
-    position: absolute;
+    position: relative;
 }
 
 button {

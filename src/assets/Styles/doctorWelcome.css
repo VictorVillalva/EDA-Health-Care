@@ -1,0 +1,51 @@
+.photo-doctor {
+    width: 219px;
+    height: 225px;
+    /* margin: var(--dl-space-space-halfunit); */
+    display: flex;
+    align-items: center;
+    border-radius: var(--dl-radius-radius-round);
+    justify-content: center;
+    background-image: linear-gradient(225deg, rgb(253, 184, 193) 11.00%, rgb(255, 0, 33) 100.00%);
+    background-repeat:no-repeat;
+    background-position: center;
+}
+
+
+.container-1 {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    flex: 0 0 auto;
+    margin-top: var(--dl-space-space-unit);
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+.doctor-card {
+    width: auto;
+    height: auto;
+    display: flex;
+    position: relative;
+    margin-top: var(--dl-space-space-halfunit);
+    align-items: center;
+    flex-direction: row;
+}
+
+.text {
+    color: rgb(0, 0, 0);
+    width: auto;
+    height: auto;
+    font-size: 32px;
+    /* align-self: auto; */
+    font-style: SemiBold;
+    margin-top: var(--dl-space-space-halfunit);
+    text-align: left;
+    font-family: 'Poppins';
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+}

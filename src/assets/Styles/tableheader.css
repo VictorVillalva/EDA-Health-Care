@@ -1,0 +1,22 @@
+.spanTable {
+    color: #0000;
+    display: flex;
+    font-size: 16px;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: normal;
+    justify-content: space-around;
+}
+
+.head {
+    display: flex;
+    border-color: transparent;
+    width: auto;
+    padding: var(--dl-space-space-halfunit);
+    border-color: transparent transparent;
+    justify-self: center;
+    flex-direction: row;
+}

@@ -1,0 +1,21 @@
+
+.contacts{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    border-color: transparent; 
+}
+.span-table {
+    color: #190e0e00;
+    display: flex;
+    font-size: 16px;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    font-family:'Poppins', Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+    line-height: normal;
+    justify-content: space-around;
+}
