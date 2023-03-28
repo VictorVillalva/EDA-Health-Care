@@ -33,6 +33,33 @@ function FormSignUp(props) {
         // a
     };
 
+
+    //show "clave doctor"
+    const [hasDoctor, setHasDoctor] = useState({
+        tieneDoctor: false,
+        claveDoctor: ""
+    });
+    const [showClaveDoctorInput, setShowClaveDoctorInput] = useState(false);
+    const handleInputChangeHasDoctor = (event) => {
+        const target = event.target;
+        const value = target.type === "checkbox" ? target.checked : target.value;
+        const name = target.name;
+
+        if (name === "tieneDoctor") {
+            setShowClaveDoctorInput(value);
+        }
+        setFormData({
+            ...formData,
+            [name]: value
+        });
+    };
+
+    // const handleSubmitTieneDoctor = (event) => {
+    //     event.preventDefault();
+    //     // handle form submission here
+    // };
+
+
     return (
         <>
             <div className="col-6">
@@ -152,10 +179,22 @@ function FormSignUp(props) {
                                     id="tiene-doctor"
                                     name="tieneDoctor"
                                     checked={formData.tieneDoctor}
-                                    onChange={handleInputChange}
+                                    onChange={handleInputChangeHasDoctor}
                                 />
                             </label>
                         </div>
+                        {showClaveDoctorInput && (
+                            <div>
+                                <label htmlFor="clave-doctor">Ingrese clave del doctor:</label>
+                                <input
+                                    type="text"
+                                    id="clave-doctor"
+                                    name="claveDoctor"
+                                    value={formData.claveDoctor}
+                                    onChange={handleInputChange}
+                                />
+                            </div>
+                        )}
                         <div className="submit-button">
                             <ButtonEntrar buttonText="Registrarse" />
                         </div>
