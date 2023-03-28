@@ -11,7 +11,7 @@ const Header = () => {
       <div className="row headerPage">
         <div className="col-1"></div>
         <div className="col-2">
-          <img src={logo} alt="" />
+          <img src={logo} alt="" id='logoHealthCare'/>
           <span className='titlePage'>HealthCare</span>
         </div>
         <div className="col-5"></div>
@@ -19,7 +19,7 @@ const Header = () => {
           <nav className='options'>
             <a href="" className='option'>Inicio</a>
             <a href="" className='option'>Servicio</a>
-            <a href="" className='option'><img src={user}/></a>
+            <a href="" className='option'><img src={user} id='imgUserHeader'/></a>
           </nav>
         </div>
       </div>
