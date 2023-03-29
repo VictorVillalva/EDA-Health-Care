@@ -8,6 +8,7 @@ import SignUp from "./pages/SignUp.jsx";
 import UserPage from "./pages/UserPage.jsx";
 import Login from "./pages/Login";
 import AdminPage from "./pages/AdminPage";
+import Synchronization from "./pages/Synchronization";
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
                     <Route path={'/login'} element={<Login />}/>
                     <Route path={'/patient'} element={<PatientDetails />}/>
                     <Route path={'/admin'} element={<AdminPage />}></Route>
+                    <Route path={'/sync'} element={<Synchronization />}></Route>
                 </Routes>
             </BrowserRouter>
         </>

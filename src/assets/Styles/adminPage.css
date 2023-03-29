@@ -151,3 +151,101 @@ body.active-modal {
     border: none;
     background-color: transparent;
 }
+
+/*Media Querys*/
+@media (max-width: 576px){
+    .titleAdminDataNameImage{
+        width: 100%;
+    }
+    .nameAdminTitle{
+        margin-left: 20%;
+        width: 50%
+    }
+    .title-admin{
+        font-size: 100%;
+    }
+    .nameAdmin{
+        font-size: 100%;
+    }
+    .textAdminAction{
+        font-size: 100%;
+    }
+    .optionDataDoctor{
+        font-size: 50%;
+    }
+    .answerDataDoctor{
+        font-size: 50%;
+    }
+}
+@media (min-width:577px) and (max-width:768px){
+    .titleAdminDataNameImage{
+        width: 100%;
+    }
+    .nameAdminTitle{
+        margin-left: 20%;
+        width: 50%
+    }
+    .title-admin{
+        font-size: 100%;
+    }
+    .nameAdmin{
+        font-size: 100%;
+    }
+    .textAdminAction{
+        font-size: 100%;
+    }
+    .optionDataDoctor{
+        font-size: 50%;
+    }
+    .answerDataDoctor{
+        font-size: 50%;
+    }
+}
+@media (min-width:769px) and (max-width:992px){
+    .titleAdminDataNameImage{
+        width: 100%;
+    }
+    .nameAdminTitle{
+        margin-left: 20%;
+        width: 50%
+    }
+    .title-admin{
+        font-size: 100%;
+    }
+    .nameAdmin{
+        font-size: 100%;
+    }
+    .textAdminAction{
+        font-size: 100%;
+    }
+    .optionDataDoctor{
+        font-size: 70%;
+    }
+    .answerDataDoctor{
+        font-size: 50%;
+    }
+}
+@media (min-width:993px) and (max-width:1279px){
+    .titleAdminDataNameImage{
+        width: 100%;
+    }
+    .nameAdminTitle{
+        margin-left: 20%;
+        width: 50%
+    }
+    .title-admin{
+        font-size: 100%;
+    }
+    .nameAdmin{
+        font-size: 100%;
+    }
+    .textAdminAction{
+        font-size: 100%;
+    }
+    .optionDataDoctor{
+        font-size: 80%;
+    }
+    .answerDataDoctor{
+        font-size: 60%;
+    }
+}

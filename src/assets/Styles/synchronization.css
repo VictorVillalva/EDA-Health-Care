@@ -1,0 +1,71 @@
+.headerSYNC{
+    height: 891px;
+    background: linear-gradient(262.56deg, #F83953 -12.5%, #FB8B9A 115.71%);
+}
+.title-SYNC{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 200px;
+}
+.code{
+    width: 1010px;
+    height: 100px;
+    background: #FFFFFF;
+    border: 1px solid #D3D3D3;
+    border-radius: 15px; 
+    margin-top: 38px;
+    margin-bottom: 85px;
+}
+.buttonVolverSYNC{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.footerSYNC{
+    margin-top: 5%;
+}
+
+/*Media Querys*/
+@media (max-width: 576px){
+    .title-SYNC{
+        font-size: 100%;
+        line-height: 100%;
+    }
+    .code{
+        width: 200%;
+    }
+}
+@media (min-width:577px) and (max-width:768px){
+    .title-SYNC{
+        font-size: 100%;
+        line-height: 100%;
+    }
+    .code{
+        width: 200%;
+    }
+}
+@media (min-width:769px) and (max-width:992px){
+    .title-SYNC{
+        font-size: 100%;
+        line-height: 100%;
+    }
+    .code{
+        width: 200%;
+    }
+}
+@media (min-width:993px) and (max-width:1279px){
+    .title-SYNC{
+        font-size: 100%;
+        line-height: 100%;
+    }
+    .code{
+        width: 200%;
+    }
+}
