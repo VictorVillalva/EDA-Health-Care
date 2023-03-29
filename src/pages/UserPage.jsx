@@ -13,6 +13,7 @@ import UserImageAndName from "../components/UserImageAndName.jsx";
 function UserPage(props) {
     const [userData, setUserData] = useState('');
 
+
     // useEffect(() => {
     //     fetch('https://example-api.com/user-data')
     //         .then(response => response.json())
