@@ -5,11 +5,16 @@ import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 //CSS
 import '../assets/Styles/estatusDiagnostico.css';
 import '../assets/Styles/button10.css';
+import ProgressBar from 'react-bootstrap/ProgressBar';
 
 
 const EstatusDiagnostico = () => {
   const [porcentaje, setPorcentaje] = useState(20);
-  return (
+
+    const [barraRitmoCardiaco, setBarraRitmoCardiaco] = useState(20);
+    const [barraSignosVitales, setBarraSignosVitales] = useState(50);
+
+    return (
     <div className='container cardEstatus'>
         <div className="row">
             <div className="informationEstatus">
@@ -20,11 +25,11 @@ const EstatusDiagnostico = () => {
           <div className="estatusCard">
             <div className="ritmoCardiaco">
               <h5 className='textRitmoCardiaco'>Ritmo cardiaco</h5>
-              <h5 className='estatusRitmoCardiaco'>------------</h5>
+                <ProgressBar variant="danger" now={barraRitmoCardiaco} />
             </div>
             <div className="signosVitales">
               <h5 className='textSignosVitales'>Signos Vitales</h5>
-              <h5 className='estatusSignosVitale'>------------</h5>
+                <ProgressBar variant="danger" now={barraSignosVitales} />
             </div>
           </div>
         </div>

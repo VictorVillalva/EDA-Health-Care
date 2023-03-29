@@ -11,6 +11,7 @@ import AdminPage from "./pages/AdminPage";
 import Synchronization from "./pages/Synchronization";
 import DoctorPage from "./pages/DoctorPage";
 import HomePage from "./pages/HomePage";
+import EstatusDiagnostico from "./Card/EstatusDiagnostico.jsx";
 
 function App() {
 
@@ -27,6 +28,8 @@ function App() {
                     <Route path={'/sync'} element={<Synchronization/>}></Route>
                     <Route path={'/userPage'} element={<UserPage/>}/>
                     <Route path={'/userHome'} element={<HomePage/>}></Route>
+                    <Route path={'/test'} element={<EstatusDiagnostico />}></Route>
+
                 </Routes>
             </BrowserRouter>
         </>
