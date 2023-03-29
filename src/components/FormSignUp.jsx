@@ -62,6 +62,8 @@ function FormSignUp(props) {
                 [name]: value
             });
         };
+
+        
     return (
         <>
             <div className="col-6 formSingUp">
