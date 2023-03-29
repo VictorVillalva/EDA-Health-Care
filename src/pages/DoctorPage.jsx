@@ -4,7 +4,7 @@ import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 //Components
 import Header from '../components/HeaderWhite';
 import Footer from '../components/Footer';
-import Button from '../Atom/Button10';
+
 //CSS
 import '../assets/Styles/doctorPage.css';
 import "react-circular-progressbar/dist/styles.css";
