@@ -7,6 +7,7 @@ import PatientDetails from './pages/PatientDetails';
 import SignUp from "./pages/SignUp.jsx";
 import UserPage from "./pages/UserPage.jsx";
 import Login from "./pages/Login";
+import AdminPage from "./pages/AdminPage";
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
                     <Route path={'/doctor'} element={<DoctorDetails />}/>
                     <Route path={'/login'} element={<Login />}/>
                     <Route path={'/patient'} element={<PatientDetails />}/>
+                    <Route path={'/admin'} element={<AdminPage />}></Route>
                 </Routes>
             </BrowserRouter>
         </>

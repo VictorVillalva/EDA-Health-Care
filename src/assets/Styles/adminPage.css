@@ -1,0 +1,153 @@
+#subirFoto{
+    display: none;
+}
+.subirfoto-label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-image: url(../Images/UserImageTest.jpg);
+    background-size: contain;
+    background-position: center;
+    border: 4px solid #F83953;
+    color:transparent;
+    transition: .3s all;
+    /*Texto*/
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 250;
+    font-size: 1.54275rem;
+    line-height: 1.9rem;
+}
+.subirfoto-label:hover{
+    background: transparent;
+    color: black;
+}
+.adminActions{
+    height: 700px;
+}
+.adminAction{
+    margin-top: 80px;
+}
+.createDoctor{
+    margin-top: 45px;
+}
+.textAdminAction{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+.checkCreateDoctor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.textCreateDoctor{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+/*Vetana prueba*/
+body.active-modal {
+    overflow-y: hidden;
+}
+.newDoctor, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+.overlay {
+    background: rgba(49,49,49,0.8);
+}
+.doctor-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #f1f1f1;
+    padding: 14px 28px;
+    border-radius: 3px;
+    width: 495px;
+    height: 700px;
+    background: #F9F9F9;
+    border-radius: 15px;
+}
+.close-doctor {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 7px;
+}
+/*---------------------*/
+.createDoctorItems{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.optionDoctor{
+    display: block;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #5C5C5C;
+}
+.inputDoctor{
+    height: 45px;
+    background: #FFFFFF;
+    border: 0.3px solid rgba(92, 92, 92, 0.7);
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+.button10div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+.viewDoctor{
+    margin-top: 100px;
+    height: 64px;
+    background: #F4F4F4;
+    border: 1px solid #E6E6E6;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+.dataDoctor{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.optionDataDoctor{
+    display: block;
+}
+.eliminateDoctor{
+    border: none;
+    background-color: transparent;
+}
