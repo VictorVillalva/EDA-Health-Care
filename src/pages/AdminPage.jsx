@@ -35,13 +35,13 @@ const AdminPage = () => {
     </section>
     <section className='adminData'>
         <div className="container">
-            <div className="row">
+            <div className="row titleAdminDataNameImage">
                 <div className="col-2">
                     <div className="perfil-circle">
                         <img className="subirfoto-label"/>
                     </div>
                 </div>
-                <div className="col-2">
+                <div className="col-2 nameAdminTitle">
                     <h1 className="title-admin">Bienvenido</h1>
                     <span className='nameAdmin'>Nombre de admin</span>
                 </div>
@@ -53,7 +53,7 @@ const AdminPage = () => {
         <div className="container">
             <div className="row adminAction">
                 <div className="col-1"></div>
-                <div className="col-4">
+                <div className="col-4 opcAdministrador">
                     <span className="textAdminAction">
                         Opciones de administrador
                     </span>
@@ -111,23 +111,23 @@ const AdminPage = () => {
                             </div>
                             <div className="dataDoctorEstatus">
                                 <span className='optionDataDoctor'>Doctor: </span>
-                                <span>Name doctor</span>
+                                <span className='answerDataDoctor'>Marco</span>
                             </div>    
                             <div className="dataDoctorEstatus">
                                 <span className='optionDataDoctor'>Numero de cedula: </span>
-                                <span>19293883</span>
+                                <span className='answerDataDoctor'>19293883</span>
                             </div>    
                             <div className="dataDoctorEstatus">
                                 <span className='optionDataDoctor'>Correo Electronico: </span>
-                                <span>asdfghjklñ</span>
+                                <span className='answerDataDoctor'>asdfghjklñ</span>
                             </div>    
                             <div className="dataDoctorEstatus">
                                 <span className='optionDataDoctor'>Numero de cedula: </span>
-                                <span>19293883</span>
+                                <span className='answerDataDoctor'>19293883</span>
                             </div>    
                             <div className="dataDoctorEstatus">
                                 <span className='optionDataDoctor'>Numero de cedula: </span>
-                                <span>19293883</span>
+                                <span className='answerDataDoctor'>19293883</span>
                             </div> 
                             <div className="iconEstatus">
                                 <button className='eliminateDoctor'>
