@@ -44,50 +44,7 @@ function UserPage(props) {
                     <UserImageAndName name={userData.name} imageSrc={userData.imageSrc} />
                 </div>
                 <div className="buttons">
-                    <div className="button-container-diagnostic">
-                        <span className="button-text-diagnostic">Realizar Diagnostico</span>
-                        <button className="base-btn-diagnostic" onClick={togglerPacient}>
-                            <img src="src/assets/Images/buttonDiagnostic.png" className="diagnostic-btn" alt="Button Image"/>
-                        </button>
-                    </div>
-                    {estatusPacient && (
-                        <div className="newPacient">
-                            <div  onClick={togglerPacient} className="overlay">
-                                <div className="pacient-content">
-                                    <div className="title-estatus">
-                                        <h1 className='pacienteProgresoEstatus'>Diagnostico</h1>
-                                    </div>
-                                    <hr />
-                                    <div className="estatusDataPacient">
-                                        <h5 className='pacienteProgresoEstatus'>Dolor de Cabeza</h5>
-                                        <div className="optionsDiag">
-                                            <span>SI <input type="checkbox" /></span>
-                                            <span>NO <input type="checkbox" /></span>
-                                        </div>
-                                        <h5 className='pacienteProgresoEstatus'>Zumbido de oidos</h5>
-                                        <div className="optionsDiag">
-                                            <span>SI <input type="checkbox" /></span>
-                                            <span>NO <input type="checkbox" /></span>
-                                        </div>
-                                        <h5 className='pacienteProgresoEstatus'>Dolor en el epigastrio</h5>
-                                        <div className="optionsDiag">
-                                            <span>SI <input type="checkbox" /></span>
-                                            <span>NO <input type="checkbox" /></span>
-                                        </div>
-                                        <h5 className='pacienteProgresoEstatus'>Edemas en miembros inferiores o superiores (hinchazón)</h5>
-                                        <div className="optionsDiag">
-                                            <span>SI <input type="checkbox" /></span>
-                                            <span>NO <input type="checkbox" /></span>
-                                        </div>
-                                    </div>
-                                    <hr />
-                                    <div className="iniciarDiag">
-                                        <button className='button1'>Iniciar</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    )}
+                    <ButtonDiagnostic className="btn"/>
                     <ButtonPairing className="btn" />
                 </div>
             </section>
