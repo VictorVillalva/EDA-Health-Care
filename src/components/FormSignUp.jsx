@@ -3,9 +3,13 @@ import '../assets/Styles/formSignUp.css';
 import '../assets/Styles/formLogin.css';
 import ButtonEntrar from "../Atom/ButtonEntrar.jsx";
 import {useState} from "react";
+import axios from "axios";
+import {useNavigate} from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 function FormSignUp(props) {
+    const navigate=useNavigate();
 
     const [formData, setFormData] = useState({
         nombre: '',
@@ -17,6 +21,10 @@ function FormSignUp(props) {
         telefono: '',
         email: '',
         contrasena: '',
+        nombreContactoEmergencia: '',
+        numeroContactoEmergencia: '',
+        emailContactoEmergencia: '',
+        claveDoctor:'',
         tieneDoctor: false,
     });
 
@@ -41,6 +49,37 @@ function FormSignUp(props) {
         //     return
         // }
         // setError(false);
+
+        axios.post('https://healthcares.ddns.net/auth/signUp',{
+         name:formData.nombre,
+         lastname:formData.apellidos,
+         gender: formData.genero,
+         dateOfBirth:formData.fechaNacimiento,
+         weight: formData.peso,
+         height: formData.altura,
+         phoneNumber: formData.telefono,
+         email: formData.email,
+         password:formData.contrasena,
+         primaryDoctorId: formData.claveDoctor,
+            photoURL: '',
+            emergencyContact:{
+                contactName:formData.nombreContactoEmergencia,
+                contactPhoneNumber: formData.numeroContactoEmergencia,
+                contactEmail:formData.emailContactoEmergencia
+            }
+
+        }).then(function (res) {
+
+            navigate('/login')
+        }).catch(function (err) {
+            console.log(err)
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Algo ah salido mal, intenta de nuevo mas tarde o verifica tus credenciales',
+                footer: '<a href="">recargar pagina</a>'
+            })
+        })
     };
 
         //show "clave doctor"
@@ -53,7 +92,7 @@ function FormSignUp(props) {
             const target = event.target;
             const value = target.type === "checkbox" ? target.checked : target.value;
             const name = target.name;
-    
+
             if (name === "tieneDoctor") {
                 setShowClaveDoctorInput(value);
             }
@@ -135,7 +174,7 @@ function FormSignUp(props) {
                             required
                         />
 
-                        <label htmlFor="altura">Altura (cm):</label>
+                        <label htmlFor="altura">Altura (m):</label>
                         <input
                             type="number"
                             id="altura"
@@ -173,6 +212,36 @@ function FormSignUp(props) {
                             onChange={handleInputChange}
                             required
                         />
+                        {/*missing emergency contact*/}
+                        <label htmlFor="nombreContactoEmergencia">Nombre Contacto de emergencia::</label>
+                        <input
+                            type="text"
+                            id="nombreContactoEmergencia"
+                            name="nombreContactoEmergencia"
+                            value={formData.nombreContactoEmergencia}
+                            onChange={handleInputChange}
+                            required
+                        />
+                        <label htmlFor="numeroContactoEmergencia">numero telofonico de emergencia:</label>
+                        <input
+                            type="tel"
+                            id="numeroContactoEmergencia"
+                            name="numeroContactoEmergencia"
+                            value={formData.numeroContactoEmergencia}
+                            onChange={handleInputChange}
+                            required
+                        />
+                        <label htmlFor="emailContactoEmergencia">Correo electrónico de emergencia:</label>
+                        <input
+                            type="email"
+                            id="emailContactoEmergencia"
+                            name="emailContactoEmergencia"
+                            value={formData.emailContactoEmergencia}
+                            onChange={handleInputChange}
+                            required
+                        />
+                        {/*till here*/}
+
                         <div>
                             <label htmlFor="tiene-doctor">
                                 ¿Tiene un doctor asignado?

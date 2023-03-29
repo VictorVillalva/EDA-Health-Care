@@ -1,5 +1,5 @@
 //hooks
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 //CSS
 import '../assets/Styles/userPage.css';
 //COMPONENTES
@@ -9,15 +9,24 @@ import HealthStatus from "../components/HealthStatus.jsx";
 import Footer from '../components/Footer';
 import HeaderWhite from "../components/HeaderWhite.jsx";
 import UserImageAndName from "../components/UserImageAndName.jsx";
+import {TokenContext} from "../context/TokenContext.jsx";
 
 function UserPage(props) {
     const [userData, setUserData] = useState('');
-    
-    // useEffect(() => {
-    //     fetch('https://example-api.com/user-data')
-    //         .then(response => response.json())
-    //         .then(data => setUserData(data));
-    // }, []);
+    const {token} =useContext(TokenContext);
+const id ="64238283ab95e649b82ec351"
+
+    useEffect(() => {
+        fetch(`https://healthcares.ddns.net/patient/${id}`,{
+            headers:{
+                "content-type":"application/json",
+                "x-access-token":`${token}`
+            }
+
+        })
+            .then(response => response.json())
+            .then(data => setUserData(data));
+    }, []);
 
     return (
         <>
@@ -28,7 +37,7 @@ function UserPage(props) {
                     </div>
                 </div>
                 <div className="user">
-                    <UserImageAndName name={userData.name} imageSrc={userData.imageSrc} />
+                    <UserImageAndName name={userData.name} imageSrc={userData.photoURL} />
                 </div>
                 <div className="buttons">
                     <ButtonDiagnostic className="btn" />
