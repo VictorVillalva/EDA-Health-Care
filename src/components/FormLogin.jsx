@@ -57,7 +57,7 @@ const FormLogin = () => {
                                 </div>
                             )}
                             <span className='linkRegistro primeroLink'>¿Aun no estas registrado?</span>
-                            <span className='linkRegistro segundaLink'>Da <a className='linkR'> click aqui </a> para registrate</span>
+                            <span className='linkRegistro segundaLink'>Da <a className='linkR' href="signUp"> click aqui </a> para registrate</span>
                         </div>
                     </div>
                 </form>
