@@ -85,10 +85,6 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
-            <br /><br /><br /><br />
-            <div className="row">
-                <EstatusDiagnostico />
-            </div>
         </div>
     </section>
     <section className='footerUserPage'><Footer /></section>
