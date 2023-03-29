@@ -1,6 +1,6 @@
 import '../assets/Styles/buttonDiagnostic.css';
 import { useState } from 'react';
-import Diagno from '../components/FormDiagnostic';
+import Diagno from '../Card/FormDiagnostic';
 
 const Button = () => {
     const [diagnostic, setDiagnostic] = useState(false);

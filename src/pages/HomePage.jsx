@@ -41,7 +41,9 @@ const HomePage = () => {
                 <div className="col-2">
                     <div className="diagnosticoDiv">
                         <span className="textActionUser">Emparejamiento</span>
-                        <img src={sincro} alt="" />
+                        <a href="/sync">
+                            <img src={sincro} alt="" />
+                        </a>
                     </div>
                 </div>
                 <div className="col-1"></div>
