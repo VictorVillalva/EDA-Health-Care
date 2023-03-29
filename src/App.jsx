@@ -19,14 +19,12 @@ function App() {
                 <Routes>
                     <Route index element={<Index/>}/>
                     <Route path={'/home'} element={<Index/>}/>
+                    <Route path={'/admin'} element={<AdminPage/>}></Route>
+                    <Route path={'/homeDoctor'} element={<DoctorPage/>}></Route>
+                    <Route path={'/login'} element={<Login/>}/>
                     <Route path={'/signUp'} element={<SignUp/>}/>
-                    <Route path={'/userPage'} element={<UserPage />}/>
-                    <Route path={'/doctor'} element={<DoctorDetails />}/>
-                    <Route path={'/login'} element={<Login />}/>
-                    <Route path={'/patient'} element={<PatientDetails />}/>
-                    <Route path={'/admin'} element={<AdminPage />}></Route>
-                    <Route path={'/sync'} element={<Synchronization />}></Route>
-                    <Route path={'/homeDoctor'} element={<DoctorPage />}></Route>
+                    <Route path={'/sync'} element={<Synchronization/>}></Route>
+                    <Route path={'/userPage'} element={<UserPage/>}/>
                 </Routes>
             </BrowserRouter>
         </>
