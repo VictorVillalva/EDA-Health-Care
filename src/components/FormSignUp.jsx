@@ -17,6 +17,10 @@ function FormSignUp(props) {
         telefono: '',
         email: '',
         contrasena: '',
+        nombreContacto: '',
+        apellidosContacto: '',
+        telefonoContacto: '',
+        emailContacto: '',
         tieneDoctor: false,
     });
 
@@ -172,6 +176,48 @@ function FormSignUp(props) {
                             id="contrasena"
                             name="contrasena"
                             value={formData.contrasena}
+                            onChange={handleInputChange}
+                            required
+                        />
+
+
+                        {/*<hr className="separator" />*/}
+                        <br/>
+                        <label htmlFor="contacto">CONTACTO:</label>
+                        <label htmlFor="nombre-contacto">Nombre:</label>
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            value={formData.nombreContacto}
+                            onChange={handleInputChange}
+                            required
+                        />
+                        <label htmlFor="apellidos-contacto">Apellidos:</label>
+                        <input
+                            type="text"
+                            id="apellidos"
+                            name="apellidos"
+                            value={formData.apellidosContacto}
+                            onChange={handleInputChange}
+                            required
+                        />
+                        <label htmlFor="telefono-contacto">Número telefónico:</label>
+                        <input
+                            type="tel"
+                            id="telefono"
+                            name="telefono"
+                            value={formData.telefonoContacto}
+                            onChange={handleInputChange}
+                            required
+                        />
+
+                        <label htmlFor="email-contacto">Correo electrónico:</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            value={formData.emailContacto}
                             onChange={handleInputChange}
                             required
                         />
