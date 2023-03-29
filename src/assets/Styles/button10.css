@@ -1,4 +1,4 @@
-.button10{
+.button1{
     width: 186px;
     height: 40px;
     background: #FFFFFF;
@@ -8,23 +8,9 @@
     font-weight: 600;
     box-sizing: border-box;
 }
-.button10:hover{
+.button1:hover{
     color: #FFFFFF;
     border: transparent;
     background: #FA6579;
     transition: .5s;
-}
-
-/*Media Querys*/
-@media (max-width: 576px){
-
-}
-@media (min-width:577px) and (max-width:768px){
-
-}
-@media (min-width:769px) and (max-width:992px){
-
-}
-@media (min-width:993px) and (max-width:1279px){
-
 }

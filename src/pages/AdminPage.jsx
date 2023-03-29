@@ -3,11 +3,19 @@ import { useState } from 'react';
 //Components
 import Header from '../components/HeaderWhite';
 import Footer from '../components/Footer';
+import Button10 from '../Atom/Button10';
 //CSS
 import '../assets/Styles/adminPage.css';
 
 const AdminPage = () => {
     const [createDoctor, setCreateDoctor] = useState(false);
+    const [nombreDoctor, setNombreDoctor] = useState('');
+    const [apellidoDoctor, setApellidoDoctor] = useState('');
+    const [cedulaDoctor, setCedulaDoctor] = useState('');
+    const [telDoctor, setTelDoctor] = useState('');
+    const [emailDoctor, setEmailDoctor] = useState('');
+    const [passwordDoctor, setPasswordDoctor] = useState('');
+
 
     const toggleDoctor = () =>{
         setCreateDoctor(!createDoctor);
@@ -38,7 +46,6 @@ const AdminPage = () => {
         </div>
     </section>
     <hr />
-
     <section className='adminActions'>
         <div className="container">
             <div className="row adminAction">
@@ -67,18 +74,25 @@ const AdminPage = () => {
                         <div className="newDoctor">
                         <div onClick={toggleDoctor} className="overlay"></div>
                         <div className="doctor-content">
-                          <h2>Hello Modal</h2>
-                          <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-                            perferendis suscipit officia recusandae, eveniet quaerat assumenda
-                            id fugit, dignissimos maxime non natus placeat illo iusto!
-                            Sapiente dolorum id maiores dolores? Illum pariatur possimus
-                            quaerat ipsum quos molestiae rem aspernatur dicta tenetur. Sunt
-                            placeat tempora vitae enim incidunt porro fuga ea.
-                          </p>
-                          <button className="close-doctor" onClick={toggleDoctor}>
-                            CLOSE
-                          </button>
+                            <form action="">
+                                <div className="createDoctorItems">
+                                    <span className='optionDoctor'>Nombre</span>
+                                    <input type="text" className='inputDoctor' value={nombreDoctor} required/>
+                                    <span className='optionDoctor'>Apellidos</span>
+                                    <input type="text" className='inputDoctor' value={apellidoDoctor} required/>
+                                    <span className='optionDoctor'>Cedula Profesional</span>
+                                    <input type="number" className='inputDoctor' value={cedulaDoctor} required/>
+                                    <span className='optionDoctor'>Numero Telefonico</span>
+                                    <input type="tel" className='inputDoctor' value={telDoctor} required/>
+                                    <span className='optionDoctor'>Correo Electronico</span> 
+                                    <input type="email" className='inputDoctor' value={emailDoctor} required/>
+                                    <span className='optionDoctor'>Contraseña</span>
+                                    <input type="password" className='inputDoctor' value={passwordDoctor} required/>
+                                </div>
+                                <div className="button10div">
+                                    <Button10 />
+                                </div>
+                            </form>
                         </div>
                       </div>
                     )}
