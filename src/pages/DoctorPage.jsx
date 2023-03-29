@@ -129,16 +129,16 @@ const DoctorPage = () => {
                             <div  onClick={togglerPacient} className="overlay">
                                 <div className="pacient-content">
                                     <div className="title-estatus">
-                                        <h1>Estatus de Diagnostico</h1>
+                                        <h1 className='pacienteProgresoEstatus'>Estatus de Diagnostico</h1>
                                     </div>
                                     <div className="name-pacient">
-                                        <h6>Nombre paciente</h6>
+                                        <h6 className='pacienteProgresoEstatus'>Nombre paciente</h6>
                                     </div>
                                     <div className="estatusDataPacient">
-                                        <h5>Ritmo Cardiaco</h5>
-                                        <h5>--aqui va ritmo cardiado--</h5>
-                                        <h5>Signos Vitales</h5>
-                                        <h5>--aqui va signos vitales--</h5>
+                                        <h5 className='pacienteProgresoEstatus'>Ritmo Cardiaco</h5>
+                                        <h5 className='pacienteProgresoEstatus'>--aqui va ritmo cardiado--</h5>
+                                        <h5 className='pacienteProgresoEstatus'>Signos Vitales</h5>
+                                        <h5 className='pacienteProgresoEstatus'>--aqui va signos vitales--</h5>
                                     </div>
                                     <div className="barra">
                                         <div className="progressDiagnostico">
@@ -153,7 +153,7 @@ const DoctorPage = () => {
                                         </div>
                                     </div>
                                     <div className="notificar">
-                                        <h5>¿Desea notificar la situacion?</h5>
+                                        <h5 className='pacienteProgresoEstatus'>¿Desea notificar la situacion?</h5>
                                         <div className="button-decision">
                                             <button className='button1'>Si</button>
                                             <button className='button1'>No</button>
