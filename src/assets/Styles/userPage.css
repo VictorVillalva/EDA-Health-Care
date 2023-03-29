@@ -49,6 +49,18 @@
     display: flex;
     justify-content: center;
 }
+.optionsDiag{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.iniciarDiag{
+    margin-top: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 
 /*Media Querys*/
 @media (max-width: 576px){

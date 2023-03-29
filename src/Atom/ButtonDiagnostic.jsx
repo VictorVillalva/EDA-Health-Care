@@ -1,14 +1,14 @@
 import '../assets/Styles/buttonDiagnostic.css';
+import { useState } from 'react';
 
 const Button = () => {
+
+
+
     return (
         <>
-            <div className="button-container-diagnostic">
-                <span className="button-text-diagnostic">Realizar Diagnostico</span>
-                <button className="base-btn-diagnostic">
-                    <img src="src/assets/Images/buttonDiagnostic.png" className="diagnostic-btn" alt="Button Image"/>
-                </button>
-            </div>
+
+
         </>
     )
 }
