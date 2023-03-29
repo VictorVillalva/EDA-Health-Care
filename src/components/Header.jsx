@@ -17,9 +17,9 @@ const Header = () => {
         <div className="col-5"></div>
         <div className="col-3">
           <nav className='options'>
-            <a href="" className='option'>Inicio</a>
+            <a href="/home" className='option'>Inicio</a>
             <a href="" className='option'>Servicio</a>
-            <a href="" className='option'><img src={user} id='imgUserHeader'/></a>
+            <a href="/login" className='option'><img src={user} id='imgUserHeader'/></a>
           </nav>
         </div>
       </div>
