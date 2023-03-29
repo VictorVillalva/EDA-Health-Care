@@ -23,7 +23,7 @@ const Synchronization = () => {
                     <div className="code" value={code}></div>
                 </div>
                 <div className="buttonVolverSYNC">
-                        <button className='button-index'>Volver</button>
+                    <a href="/userPage"><button className='button-index'>Volver</button></a>
                 </div>
             </div>
         </div>

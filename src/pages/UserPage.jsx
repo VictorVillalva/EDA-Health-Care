@@ -12,6 +12,19 @@ import UserImageAndName from "../components/UserImageAndName.jsx";
 
 function UserPage(props) {
     const [userData, setUserData] = useState('');
+    const [diagnostic, setDiagnostic] = useState(false);
+
+    const [estatusPacient, setEstatusPacient] = useState(false);
+    const togglerPacient = () =>{
+        setEstatusPacient(!estatusPacient);
+    }
+    if(estatusPacient){
+        document.body.classList.add('active-pacient');
+    } else {
+        document.body.classList.remove('active-pacient');
+    }
+
+
 
     // useEffect(() => {
     //     fetch('https://example-api.com/user-data')

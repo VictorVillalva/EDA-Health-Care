@@ -129,6 +129,13 @@ body.active-modal {
     .optionDataPacient{
         font-size: 50%;
     }
+    .pacient-content{
+        width: 60%;
+        height: 40%;
+    }
+    .pacienteProgresoEstatus{
+        font-size: 60%;
+    }
 }
 @media (min-width:577px) and (max-width:768px){
     .titleDoctorDataNameImage{
@@ -150,13 +157,20 @@ body.active-modal {
     .optionDataPacient{
         font-size: 50%;
     }
+    .pacient-content{
+        width: 80%;
+        height: 60%;
+    }
+    .pacienteProgresoEstatus{
+        font-size: 65%;
+    }
 }
 @media (min-width:769px) and (max-width:992px){
     .titleDoctorDataNameImage{
         width: 100%;
     }
     .nameDoctorTitle{
-        margin-left: 15%;
+        margin-left: 20%;
         width: 50%
     }
     .title-doctor{
@@ -169,8 +183,16 @@ body.active-modal {
         font-size: 80%;
     }
     .optionDataPacient{
-        font-size: 70%;
+        font-size: 50%;
     }
+    .pacient-content{
+        width: 70%;
+        height: 60%;
+    }
+    .pacienteProgresoEstatus{
+        font-size: 85%;
+    }
+
 }
 @media (min-width:993px) and (max-width:1279px){
     .titleDoctorDataNameImage{
