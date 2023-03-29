@@ -66,7 +66,7 @@ const DoctorPage = () => {
             </div>
             <div className="row checkPacient">
                 <div className="col-12">
-                    {/* {pacient && (
+                    {pacient && (
                     <div className="viewPacient">
                         <div className="dataPacient">
                             <div className="iconEstatus">
@@ -87,29 +87,7 @@ const DoctorPage = () => {
                             </div>
                         </div>
                     </div>
-                    )} */}
-                                        <div className="viewPacient">
-                        <div className="dataPacient">
-                            <div className="iconEstatus">
-                                <img src={user} alt="" />
-                            </div>
-                            <div className="dataPacientEstatus">
-                                <span className='optionDataPacient'>Paciente: <span>nombre</span></span>
-                            </div>
-                            <div className="dataPacientEstatus">
-                                <span className='optionDataPacient'>Dolor de Cabeza: {headache === true && <Checkmark />} {headache === false && <Xmark />}</span>
-                            </div>
-                            <div className="dataPacientEstatus">
-                                <span className='optionDataPacient'>Zumbido de Oido: {earBuzzing === true && <Checkmark />} {earBuzzing === false && <Xmark />}</span>
-                            </div>
-                            <div className="dataPacientEstatus">
-                                <span className='optionDataPacient'>Dolor en el Epigastrio: {epigastricPain === true && <Checkmark />} {epigastricPain === false && <Xmark />}</span>
-                            </div>
-                            <div className="dataPacientEstatust">
-                                <button className='estatus'><img src={share} alt="" /></button>
-                            </div>
-                        </div>
-                    </div>
+                    )} 
                 </div>
             </div>
         </div>
