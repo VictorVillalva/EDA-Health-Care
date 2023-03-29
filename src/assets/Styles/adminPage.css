@@ -25,6 +25,9 @@
     background: transparent;
     color: black;
 }
+.adminActions{
+    height: 700px;
+}
 .adminAction{
     margin-top: 80px;
 }
@@ -124,4 +127,27 @@ body.active-modal {
     justify-content: center;
     align-items: center;
     margin-top: 40px;
+}
+.viewDoctor{
+    margin-top: 100px;
+    height: 64px;
+    background: #F4F4F4;
+    border: 1px solid #E6E6E6;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+.dataDoctor{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.optionDataDoctor{
+    display: block;
+}
+.eliminateDoctor{
+    border: none;
+    background-color: transparent;
 }

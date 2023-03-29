@@ -4,6 +4,8 @@ import { useState } from 'react';
 import Header from '../components/HeaderWhite';
 import Footer from '../components/Footer';
 import Button10 from '../Atom/Button10';
+//Image
+import user from '../assets/Images/ContactsBlack.svg';
 //CSS
 import '../assets/Styles/adminPage.css';
 
@@ -25,6 +27,7 @@ const AdminPage = () => {
     }else{
         document.body.classList.remove('active-doctor');
     }
+
   return (
     <>
     <section className='headerAdminPage'>
@@ -99,8 +102,47 @@ const AdminPage = () => {
                 </div>
                 <div className="col-7"></div>
             </div>
+            <div className="row">
+                <div className="col-12">
+                    <div className="viewDoctor">
+                        <div className="dataDoctor">
+                            <div className="iconEstatus">
+                                <img src={user} alt="" />
+                            </div>
+                            <div className="dataDoctorEstatus">
+                                <span className='optionDataDoctor'>Doctor: </span>
+                                <span>Name doctor</span>
+                            </div>    
+                            <div className="dataDoctorEstatus">
+                                <span className='optionDataDoctor'>Numero de cedula: </span>
+                                <span>19293883</span>
+                            </div>    
+                            <div className="dataDoctorEstatus">
+                                <span className='optionDataDoctor'>Correo Electronico: </span>
+                                <span>asdfghjklñ</span>
+                            </div>    
+                            <div className="dataDoctorEstatus">
+                                <span className='optionDataDoctor'>Numero de cedula: </span>
+                                <span>19293883</span>
+                            </div>    
+                            <div className="dataDoctorEstatus">
+                                <span className='optionDataDoctor'>Numero de cedula: </span>
+                                <span>19293883</span>
+                            </div> 
+                            <div className="iconEstatus">
+                                <button className='eliminateDoctor'>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-x" viewBox="0 0 16 16">
+                                        <path d="M9.061 8l3.97-3.97a.75.75 0 0 0-1.06-1.06L8 6.939 4.03 3.03a.75.75 0 0 0-1.06 1.06L6.939 8l-3.97 3.97a.75.75 0 1 0 1.06 1.06L8 9.061l3.97 3.97a.75.75 0 0 0 1.06-1.06L9.061 8z"/>
+                                    </svg>
+                                </button>
+                            </div>            
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+    <hr />
     <section className='footerAdminPage'>
         <Footer />
     </section>
