@@ -31,7 +31,7 @@ function UserPage(props) {
                     <UserImageAndName name={userData.name} imageSrc={userData.imageSrc} />
                 </div>
                 <div className="buttons">
-                    <ButtonDiagnostic className="btn"/>
+                    <ButtonDiagnostic className="btn" />
                     <ButtonPairing className="btn" />
                 </div>
             </section>
