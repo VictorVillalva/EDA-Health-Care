@@ -6,7 +6,8 @@
 }
 .informationEstatus,
 .estatusCard, 
-.barraDiagnostico{
+.barraDiagnostico,
+.botonSalirDiagnostico{
     margin-top: 5%;
 }
 .informationEstatus, .estatusCard{
@@ -22,4 +23,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+}
+.botonSalirDiagnostico{
+    display: flex;
+    justify-content: center;
 }

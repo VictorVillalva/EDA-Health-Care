@@ -4,6 +4,7 @@ import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 
 //CSS
 import '../assets/Styles/estatusDiagnostico.css';
+import '../assets/Styles/button10.css';
 
 
 const EstatusDiagnostico = () => {
@@ -39,6 +40,11 @@ const EstatusDiagnostico = () => {
                 text={`${porcentaje}`}
               />
             </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="botonSalirDiagnostico">
+            <button className='button1'>Salir</button>
           </div>
         </div>
     </div>
