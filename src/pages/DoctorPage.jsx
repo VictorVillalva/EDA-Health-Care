@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from 'react'
+//HOOKs
+import React, { useState, useEffect } from 'react';
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 //Components
 import Header from '../components/HeaderWhite';
 import Footer from '../components/Footer';
+import Button from '../Atom/Button10';
 //CSS
 import '../assets/Styles/doctorPage.css';
-
+import "react-circular-progressbar/dist/styles.css";
 //Image
 import user from '../assets/Images/ContactsBlack.svg';
 import share from '../assets/Images/ShareBlack.svg';
@@ -14,6 +17,8 @@ const DoctorPage = () => {
     const [headache, setHeadache] = useState(null);
     const [earBuzzing, setEarBuzzing] = useState(null);
     const [epigastricPain, setEpigastricPain] = useState(null);
+    const [estatusPacient, setEstatusPacient] = useState(false);
+    const [porcentaje, setPorcentaje] = useState(0);
 
     useEffect(() =>{
         fetch(`......`)
@@ -32,6 +37,15 @@ const DoctorPage = () => {
             <path d="M9.061 8l3.97-3.97a.75.75 0 0 0-1.06-1.06L8 6.939 4.03 3.03a.75.75 0 0 0-1.06 1.06L6.939 8l-3.97 3.97a.75.75 0 1 0 1.06 1.06L8 9.061l3.97 3.97a.75.75 0 0 0 1.06-1.06L9.061 8z"/>
         </svg>
     );
+
+    const togglerPacient = () =>{
+        setEstatusPacient(!estatusPacient);
+    }
+    if(estatusPacient){
+        document.body.classList.add('active-pacient');
+    } else {
+        document.body.classList.remove('active-pacient');
+    }
 
   return (
     <>
@@ -66,7 +80,7 @@ const DoctorPage = () => {
             </div>
             <div className="row checkPacient">
                 <div className="col-12">
-                    {pacient && (
+                    {/* {pacient && (
                     <div className="viewPacient">
                         <div className="dataPacient">
                             <div className="iconEstatus">
@@ -87,7 +101,68 @@ const DoctorPage = () => {
                             </div>
                         </div>
                     </div>
-                    )} 
+                    )}  */}
+                                        <div className="viewPacient">
+                        <div className="dataPacient">
+                            <div className="iconEstatus">
+                                <img src={user} alt="" />
+                            </div>
+                            <div className="dataPacientEstatus">
+                                <span className='optionDataPacient'>Paciente: <span>nombre</span></span>
+                            </div>
+                            <div className="dataPacientEstatus">
+                                <span className='optionDataPacient'>Dolor de Cabeza: {headache === true && <Checkmark />} {headache === false && <Xmark />}</span>
+                            </div>
+                            <div className="dataPacientEstatus">
+                                <span className='optionDataPacient'>Zumbido de Oido: {earBuzzing === true && <Checkmark />} {earBuzzing === false && <Xmark />}</span>
+                            </div>
+                            <div className="dataPacientEstatus">
+                                <span className='optionDataPacient'>Dolor en el Epigastrio: {epigastricPain === true && <Checkmark />} {epigastricPain === false && <Xmark />}</span>
+                            </div>
+                            <div className="dataPacientEstatust">
+                                <button className='estatus' onClick={togglerPacient}><img src={share} alt="" /></button>
+                            </div>
+                        </div>
+                    </div>
+                    {estatusPacient && (
+                        <div className="newPacient">
+                            <div  onClick={togglerPacient} className="overlay">
+                                <div className="pacient-content">
+                                    <div className="title-estatus">
+                                        <h1>Estatus de Diagnostico</h1>
+                                    </div>
+                                    <div className="name-pacient">
+                                        <h6>Nombre paciente</h6>
+                                    </div>
+                                    <div className="estatusDataPacient">
+                                        <h5>Ritmo Cardiaco</h5>
+                                        <h5>--aqui va ritmo cardiado--</h5>
+                                        <h5>Signos Vitales</h5>
+                                        <h5>--aqui va signos vitales--</h5>
+                                    </div>
+                                    <div className="barra">
+                                        <div className="progressDiagnostico">
+                                            <CircularProgressbar 
+                                            styles={buildStyles({
+                                                pathColor: '#F71735',
+                                                textColor: '#000000'
+                                            })}
+                                            value={porcentaje}
+                                            text={`${porcentaje}`}
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="notificar">
+                                        <h5>¿Desea notificar la situacion?</h5>
+                                        <div className="button-decision">
+                                            <button className='button1'>Si</button>
+                                            <button className='button1'>No</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
