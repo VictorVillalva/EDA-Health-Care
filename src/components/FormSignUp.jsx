@@ -99,7 +99,7 @@ function FormSignUp(props) {
                         <div className='generos'>
                             <label htmlFor="masculino">
                                 <input
-                                    type="checkbox"
+                                    type="radio"
                                     id="masculino"
                                     name="genero"
                                     value="masculino"
@@ -110,7 +110,7 @@ function FormSignUp(props) {
                             </label>
                             <label htmlFor="femenino">
                                 <input
-                                    type="checkbox"
+                                    type="radio"
                                     id="femenino"
                                     name="genero"
                                     value="femenino"
@@ -172,6 +172,7 @@ function FormSignUp(props) {
                             onChange={handleInputChange}
                             required
                         />
+
                         <label htmlFor="contrasena">Contraseña:</label>
                         <input
                             type="password"
@@ -182,33 +183,34 @@ function FormSignUp(props) {
                             required
                         />
 
-
                         {/*<hr className="separator" />*/}
                         <br/>
                         <label htmlFor="contacto">CONTACTO de emergencia:</label>
                         <label htmlFor="nombre-contacto">Nombre:</label>
                         <input
                             type="text"
-                            id="nombreE"
-                            name="nombreE"
+                            id="nombre-contacto"
+                            name="nombreContacto"
                             value={formData.nombreContacto}
                             onChange={handleInputChange}
                             required
                         />
+
                         <label htmlFor="apellidosE">Apellidos:</label>
                         <input
                             type="text"
-                            id="apellidosE"
-                            name="apellidosE"
+                            id="apellidos-contacto"
+                            name="apellidosContacto"
                             value={formData.apellidosContacto}
                             onChange={handleInputChange}
                             required
                         />
+
                         <label htmlFor="telefonoE">Número telefónico:</label>
                         <input
                             type="tel"
-                            id="telefonoE"
-                            name="telefonoE"
+                            id="telefono-contacto"
+                            name="telefonoContacto"
                             value={formData.telefonoContacto}
                             onChange={handleInputChange}
                             required
@@ -217,12 +219,13 @@ function FormSignUp(props) {
                         <label htmlFor="emailE">Correo electrónico:</label>
                         <input
                             type="email"
-                            id="emailE"
-                            name="emailE"
+                            id="email-contacto"
+                            name="emailContacto"
                             value={formData.emailContacto}
                             onChange={handleInputChange}
                             required
                         />
+
                         <div>
                             <label htmlFor="tiene-doctor">
                                 ¿Tiene un doctor asignado?
@@ -235,18 +238,20 @@ function FormSignUp(props) {
                                 />
                             </label>
                         </div>
+
                         {showClaveDoctorInput && (
                             <div>
                                 <label htmlFor="clave-doctor">Ingrese clave del doctor:</label>
                                 <input
                                     type="text"
-                                    id="clave-doctor"
-                                    name="claveDoctor"
+                                    id="clave-doctorContacto"
+                                    name="claveDoctorContacto"
                                     value={formData.claveDoctor}
                                     onChange={handleInputChange}
                                 />
                             </div>
                         )}
+
                         <div className="submit-button">
                             <ButtonEntrar buttonText="Registrarse" />
                         </div>
