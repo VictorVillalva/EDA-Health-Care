@@ -1,4 +1,4 @@
-.button1{
+.button1, .button-si, .button-no {
     width: 186px;
     height: 40px;
     background: #FFFFFF;
@@ -8,7 +8,8 @@
     font-weight: 600;
     box-sizing: border-box;
 }
-.button1:hover{
+
+.button1:hover, .button-si:hover, .button-no:hover {
     color: #FFFFFF;
     border: transparent;
     background: #FA6579;

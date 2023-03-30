@@ -15,7 +15,8 @@ const EstatusDiagnostico = () => {
     const navigate = useNavigate();
     const {user} = useContext(UserContext)
     const [bpm, setBPM] = useState(0);
-    const [barraRitmoCardiaco, setBarraRitmoCardiaco] = useState(0);
+    const [barraRitmoCardiaco, setBarraRitmoCardiaco] = useState(null);
+    const [barraSignosVitales, setBarraSignosVitales] = useState(null);
     useEffect(()=>{
         axios.get(`https://healthcares.ddns.net/data/${user}`,).then(function (res) {
             console.log(res.data.bpm)
@@ -26,11 +27,6 @@ const EstatusDiagnostico = () => {
             console.log(err)
         })
     },[])
-
-
-
-
-    const [barraSignosVitales, setBarraSignosVitales] = useState(50);
 
     return (
     <div className='container cardEstatus'>
@@ -43,11 +39,11 @@ const EstatusDiagnostico = () => {
           <div className="estatusCard">
             <div className="ritmoCardiaco">
               <h5 className='textRitmoCardiaco'>Ritmo cardiaco</h5>
-                <ProgressBar variant="danger" now={barraRitmoCardiaco} />
+                <ProgressBar className="ritmo-cardiaco-barra" variant="danger" now={barraRitmoCardiaco} label={`${barraRitmoCardiaco}%`} />
             </div>
             <div className="signosVitales">
               <h5 className='textSignosVitales'>Signos Vitales</h5>
-                <ProgressBar variant="danger" now={barraSignosVitales} />
+                <ProgressBar className="signos-vitales-barra" variant="danger" now={barraSignosVitales} label={`${barraSignosVitales}%`} />
             </div>
           </div>
         </div>
@@ -64,6 +60,15 @@ const EstatusDiagnostico = () => {
               />
             </div>
           </div>
+        </div>
+        <div>
+            <div className="notification">
+                <h5 className='textNotificacion'>Desea notificar la situacion?</h5>
+            </div>
+            <div className="buttonContainer">
+                <button className='button-si'>Si</button>
+                <button className='button-no'>No</button>
+            </div>
         </div>
         <div className="row">
           <div className="botonSalirDiagnostico">
