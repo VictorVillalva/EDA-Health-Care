@@ -10,6 +10,10 @@ import Login from "./pages/Login";
 import AdminPage from "./pages/AdminPage";
 import Synchronization from "./pages/Synchronization";
 import DoctorPage from "./pages/DoctorPage";
+import HomePage from "./pages/HomePage";
+import EstatusDiagnostico from "./Card/EstatusDiagnostico.jsx";
+import FormDiagnosticPage from "./pages/FormDiagnosticPage.jsx";
+import EstatusDiagnosticoPage from "./pages/EstatusDiagnosticoPage.jsx";
 
 function App() {
 
@@ -25,6 +29,8 @@ function App() {
                     <Route path={'/signUp'} element={<SignUp/>}/>
                     <Route path={'/sync'} element={<Synchronization/>}></Route>
                     <Route path={'/userPage'} element={<UserPage/>}/>
+                    <Route path={'/userHome'} element={<HomePage/>}></Route>
+                    <Route path={'/test'} element={<FormDiagnosticPage />}/>
                 </Routes>
             </BrowserRouter>
         </>

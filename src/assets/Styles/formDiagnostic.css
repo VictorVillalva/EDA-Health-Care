@@ -28,7 +28,7 @@
     margin-bottom: 10px;
 }
 
-.diagnostico-form input[type="checkbox"] {
+.diagnostico-form input[type="radio"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -42,7 +42,7 @@
     margin-right: 8px
 }
 
-.diagnostico-form input[type="checkbox"]:checked {
+.diagnostico-form input[type="radio"]:checked {
     background-color: #fa6579;
 }
 
@@ -74,4 +74,7 @@
     border: transparent;
     background: #fa6579;
     transition: 0.5s;
+}
+.containerFormularioUsuario{
+    margin-top:5%;
 }

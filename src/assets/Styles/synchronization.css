@@ -1,9 +1,12 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
 .headerSYNC{
     height: 891px;
     background: linear-gradient(262.56deg, #F83953 -12.5%, #FB8B9A 115.71%);
 }
 .title-SYNC{
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
@@ -24,6 +27,7 @@
     margin-bottom: 85px;
 }
 .buttonVolverSYNC{
+    font-family: 'Poppins', sans-serif;
     width: 100%;
     display: flex;
     justify-content: center;

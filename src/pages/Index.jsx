@@ -27,7 +27,7 @@ const Index = () => {
             <span className='title-index'>TU SALUD SIEMPRE ES</span>
             <span className='title-index'>NUESTRA NECESIDAD</span>
             <p className='description'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam ratione explicabo magnam, fuga delectus in eveniet aut libero praesentium pariatur excepturi quis sapiente nisi, aspernatur voluptates soluta ullam, ipsa omnis?</p>
-            <a href="/admin">
+            <a href="/login">
               <button className='button-index'>Iniciar</button>
             </a>
           </div>

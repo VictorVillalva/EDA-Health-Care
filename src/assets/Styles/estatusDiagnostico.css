@@ -1,0 +1,30 @@
+.cardEstatus{
+    width: 600px;
+    height: 600px;
+    background: #ffffff;
+    border-radius: 10px;
+}
+.informationEstatus,
+.estatusCard, 
+.barraDiagnostico,
+.botonSalirDiagnostico{
+    margin-top: 5%;
+}
+.informationEstatus, .estatusCard{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.barraDiagnostico{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.botonSalirDiagnostico{
+    display: flex;
+    justify-content: center;
+}
