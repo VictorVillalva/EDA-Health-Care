@@ -1,13 +1,15 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { useState } from 'react';
 //Components
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 //CSS
 import '../assets/Styles/synchronization.css';
+import {UserContext} from "../context/UserContext.jsx";
 
 const Synchronization = () => {
     const [code, setCode] = useState('');
+    const {user} =useContext(UserContext);
 
   return (
     <>
@@ -20,7 +22,9 @@ const Synchronization = () => {
                 <div className="col-1"></div>
                 <div className="col-5">
                     <span className='title-SYNC'>Codigo de Emparejamiento</span>
-                    <div className="code" value={code}></div>
+                    <div className="code">
+                    <h3>{user}</h3>
+                    </div>
                 </div>
                 <div className="buttonVolverSYNC">
                     <a href="/userHome"><button className='button-index'>Volver</button></a>

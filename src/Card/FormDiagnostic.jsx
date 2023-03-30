@@ -1,9 +1,14 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import '../assets/Styles/formDiagnostic.css';
 import {useState} from "react";
+import {UserContext} from "../context/UserContext.jsx";
+import {TokenContext} from "../context/TokenContext.jsx";
+import axios from "axios";
 
 
 function FormDiagnostic(props) {
+    const {user}=useContext(UserContext);
+    const {token}=useContext(TokenContext);
 
     const [formState, setFormState] = useState({
         'dolor-cabeza': false,
@@ -21,11 +26,35 @@ function FormDiagnostic(props) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // a
-        console.log(formState)
-        // axios.post('',{
         //
-        // })
+        console.log(formState)
+        axios.post('https://healthcares.ddns.net/diagnosis',{
+            patientId: `${user}`,
+            headache: formState["dolor-cabeza"],
+            earBuzz: formState["zumbido-oidos"],
+            epigastricPain: formState["dolor-epigastrio"],
+            swelling: formState["edemas-miembros"]
+        },{
+            headers:{
+                "x-access-token":`${token}`
+            }
+        }).then(function (res) {
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Registro guardado exitosamente',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        }).catch(function (err) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong!',
+                footer: '<a href="">Why do I have this issue?</a>'
+            })
+        })
+
     };
 
     return (

@@ -1,5 +1,5 @@
 //Hooks
-import React from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 //Image
 import diag from '../assets/Images/diagnostico.svg';
 import sincro from '../assets/Images/sicronizar.svg';
@@ -12,9 +12,60 @@ import EstatusDiagnostico from '../Card/EstatusDiagnostico';
 
 //CSS
 import '../assets/Styles/homePage.css';
+import {TokenContext} from "../context/TokenContext.jsx";
+import {UserContext} from "../context/UserContext.jsx";
+import Swal from "sweetalert2";
+import axios from "axios";
+import DataDiagnostic from "../Card/DataDiagnostic.jsx";
 
 
 const HomePage = () => {
+    //navigate
+    // const navigate =useNavigate();
+    //context variables
+    const {token}=useContext(TokenContext);
+    const {user}=useContext(UserContext);
+
+    const [username, setUsername]=useState('');
+    const [photoUrl, setPhotoUrl]=useState('');
+    const [data,setData]=useState([]);
+
+    useEffect(()=>{
+        fetch(`https://healthcares.ddns.net/patient/${user}`,{
+            headers:{
+                "x-access-token":`${token}`
+            }
+        })  .then((response) => response.json())
+            .then((data) => {setPhotoUrl(data.photoURL); setUsername(data.name +' '+data.lastName)})
+            .catch((err) =>
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'User not Found!',
+                    footer: '<b>error?</b><br/><span>Verifique que la informacion sea correcta e intente de nuevo</span>'
+                })
+            )},[])
+
+    useEffect(()=>{
+        fetch(`https://healthcares.ddns.net/diagnosis/${user}`,{
+            headers:{
+                "x-access-token":`${token}`
+            }
+        })  .then((response) => response.json())
+            .then((data) => {
+                setData(data)
+            })
+            .catch((err) =>
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'User not Found!',
+                    footer: '<b>error?</b><br/><span>Verifique que la informacion sea correcta e intente de nuevo</span>'
+                })
+            )},[])
+
+
+
   return (
     <>
     <section className="headerUserHome"><Header /></section>
@@ -23,19 +74,21 @@ const HomePage = () => {
             <div className="row">
                 <div className="col-2">
                     <div className="perfil-circle">
-                        <img className="subirfoto-label"/>
+                        <img className="subirfoto-label" src={photoUrl}/>
                     </div>
                 </div>
                 <div className="col-5">
                     <div className="datosUserWelcome">
                         <h1 className="welcomeUser">Bienvenido</h1>
-                        <span className='nameUser'>{"nombre de usuario va aqui"}</span>
+                        <span className='nameUser'>{username}</span>
                     </div>
                 </div>
                 <div className="col-2">
                     <div className="diagnosticoDiv">
                         <span className="textActionUser">Realizar Diagnotico</span>
+                        <a href="/test">
                         <img src={diag} alt="" />
+                        </a>
                     </div>
                 </div>
                 <div className="col-2">
@@ -52,42 +105,26 @@ const HomePage = () => {
     </section>
     <hr />
     <section className="estatusPaciente">
-        <div className="container">
-            <div className="row">
-                <div className="col-12">
-                    <h2 className='textEstatusDelPaciente'>
-                        Estatus de Salud
-                    </h2>
-                </div>
-            </div>
-            
-            <div className="row">
-                <div className="col-12">
-                    <div className="estatus">
-                        <div className="informationUser">
-                            <div className="iconUser">
-                                <img src={user} alt="" />
-                            </div>
-                            <div className="sintomasUser">
-                                <span className='sintoma'>Paciente (x)</span>
-                            </div>
-                            <div className="sintomasUser">
-                                <span className='sintoma'>Sintoma uno img (x)</span>
-                            </div>
-                            <div className="sintomasUser">
-                                <span className='sintoma'>Sintoma uno img (x)</span>
-                            </div>
-                            <div className="sintomasUser">
-                                <span className='sintoma'>Sintoma uno img (x)</span>
-                            </div>
-                            <div className="iconUser">
-                                <img src={share} alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div className="row">
+            <div className="col-12">
+                <h2 className='textEstatusDelPaciente'>
+                    Estatus de Salud
+                </h2>
             </div>
         </div>
+
+        {
+            data && data.map(d=>(
+                <DataDiagnostic
+                key={d.id}
+                headache={d.headache}
+                earBuzz={d.earBuzz}
+                epigastricPain={d.epigastricPain}
+                swelling={d.swelling}
+                />
+            ))
+        }
+
     </section>
     <section className='footerUserPage'><Footer /></section>
     </>

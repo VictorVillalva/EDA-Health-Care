@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import FormDiagnostic from "../Card/FormDiagnostic.jsx";
 import HeaderWhite from "../components/HeaderWhite.jsx";
 import Footer from "../components/Footer.jsx";
 
 function FormDiagnosticPage(props) {
+
+
     return (
         <>
             <section className='headerUserDiag'>

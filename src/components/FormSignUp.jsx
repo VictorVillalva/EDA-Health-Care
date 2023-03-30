@@ -45,6 +45,8 @@ function FormSignUp(props) {
         //     return
         // }
         // setError(false);
+
+        console.log('yea')
     };
 
         //show "clave doctor"
@@ -57,7 +59,7 @@ function FormSignUp(props) {
             const target = event.target;
             const value = target.type === "checkbox" ? target.checked : target.value;
             const name = target.name;
-    
+
             if (name === "tieneDoctor") {
                 setShowClaveDoctorInput(value);
             }
@@ -67,7 +69,7 @@ function FormSignUp(props) {
             });
         };
 
-        
+
     return (
         <>
             <div className="col-6 formSingUp">
@@ -141,7 +143,7 @@ function FormSignUp(props) {
                             required
                         />
 
-                        <label htmlFor="altura">Altura (cm):</label>
+                        <label htmlFor="altura">Altura (m):</label>
                         <input
                             type="number"
                             id="altura"
@@ -183,40 +185,40 @@ function FormSignUp(props) {
 
                         {/*<hr className="separator" />*/}
                         <br/>
-                        <label htmlFor="contacto">CONTACTO:</label>
+                        <label htmlFor="contacto">CONTACTO de emergencia:</label>
                         <label htmlFor="nombre-contacto">Nombre:</label>
                         <input
                             type="text"
-                            id="nombre"
-                            name="nombre"
+                            id="nombreE"
+                            name="nombreE"
                             value={formData.nombreContacto}
                             onChange={handleInputChange}
                             required
                         />
-                        <label htmlFor="apellidos-contacto">Apellidos:</label>
+                        <label htmlFor="apellidosE">Apellidos:</label>
                         <input
                             type="text"
-                            id="apellidos"
-                            name="apellidos"
+                            id="apellidosE"
+                            name="apellidosE"
                             value={formData.apellidosContacto}
                             onChange={handleInputChange}
                             required
                         />
-                        <label htmlFor="telefono-contacto">Número telefónico:</label>
+                        <label htmlFor="telefonoE">Número telefónico:</label>
                         <input
                             type="tel"
-                            id="telefono"
-                            name="telefono"
+                            id="telefonoE"
+                            name="telefonoE"
                             value={formData.telefonoContacto}
                             onChange={handleInputChange}
                             required
                         />
 
-                        <label htmlFor="email-contacto">Correo electrónico:</label>
+                        <label htmlFor="emailE">Correo electrónico:</label>
                         <input
                             type="email"
-                            id="email"
-                            name="email"
+                            id="emailE"
+                            name="emailE"
                             value={formData.emailContacto}
                             onChange={handleInputChange}
                             required

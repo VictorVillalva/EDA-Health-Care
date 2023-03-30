@@ -1,5 +1,5 @@
 //HOOKs
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 //Components
 import Header from '../components/HeaderWhite';
@@ -11,27 +11,66 @@ import "react-circular-progressbar/dist/styles.css";
 //Image
 import user from '../assets/Images/ContactsBlack.svg';
 import share from '../assets/Images/ShareBlack.svg';
+import {TokenContext} from "../context/TokenContext.jsx";
+import {UserContext} from "../context/UserContext.jsx";
+import Swal from "sweetalert2";
+import axios from "axios";
 
 const DoctorPage = () => {
-    const [pacient, setPacient] = useState(null);
+    //navigate
+    // const navigate =useNavigate();
+    //context variables
+    const {token}=useContext(TokenContext);
+    const {user}=useContext(UserContext);
+
+    const [username, setUsername]=useState('');
+    const [photoUrl, setPhotoUrl]=useState('');
+
+    useEffect(()=>{
+        fetch(`https://healthcares.ddns.net/doctor/${user}`,{
+            headers:{
+                "x-access-token":`${token}`
+            }
+        })  .then((response) => response.json())
+            .then((data) => {setPhotoUrl(data.photoURL); setUsername(data.name +' '+data.lastName)})
+            .catch((err) =>
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'data error!',
+                    footer: '<b>error? </b><br/><span> encontramos un error, espacio en mantenimento</span>'
+                })
+            )},[])
+
+    const [pacient, setPacient] = useState([]);
     const [headache, setHeadache] = useState(null);
     const [earBuzzing, setEarBuzzing] = useState(null);
     const [epigastricPain, setEpigastricPain] = useState(null);
     const [estatusPacient, setEstatusPacient] = useState(false);
     const [porcentaje, setPorcentaje] = useState(0);
 
-    useEffect(() =>{
-        fetch(`......`)
-        .then(responde => responde.json())
-        .then (data => setPacient(data.data))
-    },[])
+    // useEffect(() =>{
+    //     axios.post('https://healthcares.ddns.net/patient/doctor',{
+    //         primaryDoctorId:`${user}`
+    //     },{
+    //         headers:{
+    //             "x-access-token":`${token}`
+    //         }
+    //     }).then(function (res) {
+    //         setData(res.data)
+    //         console.log(data)
+    //     }).catch(function (err) {
+    //         console.log(err)
+    //     })
+    // },[])
+
 
     const Checkmark = () => (
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check" viewBox="0 0 16 16">
             <path d="M12.97 3.97a.75.75 0 0 1 1.06 1.06l-7.5 7.5a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.97-6.97z"/>
         </svg>
     );
-    
+
     const Xmark = () => (
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-x" viewBox="0 0 16 16">
             <path d="M9.061 8l3.97-3.97a.75.75 0 0 0-1.06-1.06L8 6.939 4.03 3.03a.75.75 0 0 0-1.06 1.06L6.939 8l-3.97 3.97a.75.75 0 1 0 1.06 1.06L8 9.061l3.97 3.97a.75.75 0 0 0 1.06-1.06L9.061 8z"/>
@@ -57,12 +96,12 @@ const DoctorPage = () => {
             <div className="row titleDoctorDataNameImage">
                 <div className="col-2">
                     <div className="perfil-circle">
-                        <img className="subirfoto-label"/>
+                        <img className="subirfoto-label" src={photoUrl}/>
                     </div>
                 </div>
                 <div className="col-2 nameDoctorTitle">
                     <h1 className='title-doctor'>Bienvenido</h1>
-                    <span className='nameDoctor'>NOmbre Doctor</span>   
+                    <span className='nameDoctor'>{username}</span>
                 </div>
             </div>
         </div>
@@ -101,7 +140,7 @@ const DoctorPage = () => {
                             </div>
                         </div>
                     </div>
-                    )}  
+                    )}
                     {estatusPacient && (
                         <div className="newPacient">
                             <div  onClick={togglerPacient} className="overlay">
@@ -120,7 +159,7 @@ const DoctorPage = () => {
                                     </div>
                                     <div className="barra">
                                         <div className="progressDiagnostico">
-                                            <CircularProgressbar 
+                                            <CircularProgressbar
                                             styles={buildStyles({
                                                 pathColor: '#F71735',
                                                 textColor: '#000000'
