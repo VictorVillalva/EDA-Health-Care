@@ -1,10 +1,11 @@
 import share from "../assets/Images/ShareBlack.svg";
 import React from "react";
+import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa'; //Icons
 
 const dataDiagnostic = ({headache, earBuzz, epigastricPain, swelling}) => {
 
-        let {cabeza, ear,epi,swe} ='';
-        if (headache){cabeza="true"}
+        // let {cabeza, ear,epi,swe} ='';
+        // if (headache){cabeza="true"}
 
   return(
       <>
@@ -15,20 +16,23 @@ const dataDiagnostic = ({headache, earBuzz, epigastricPain, swelling}) => {
                       <div className="estatus">
                           <div className="informationUser">
                               <div className="sintomasUser">
-                                  <span className='sintoma'>Paciente (x)</span>
+                                  <span className='sintoma'>Paciente </span>
                               </div>
                               <div className="sintomasUser">
-                                  <span className='sintoma'>Sintoma uno(x) {headache}</span>
-
+                                  <span className='sintoma'>Dolor de Cabeza {headache}</span>
+                                  {headache ? <FaCheckCircle className="icon-true" /> : <FaTimesCircle className="icon-false" />}
                               </div>
                               <div className="sintomasUser">
-                                  <span className='sintoma'>Sintoma dos {earBuzz}  (x)</span>
+                                  <span className='sintoma'>Zumbido de Oido {earBuzz}</span>
+                                  {earBuzz ? <FaCheckCircle className="icon-true" /> : <FaTimesCircle className="icon-false" />}
                               </div>
                               <div className="sintomasUser">
-                                  <span className='sintoma'>Sintoma tres {epigastricPain} (x)</span>
+                                  <span className='sintoma'>Dolor en el epigastrio {epigastricPain}</span>
+                                  {epigastricPain ? <FaCheckCircle className="icon-true" /> : <FaTimesCircle className="icon-false" />}
                               </div>
                               <div className="sintomasUser">
-                                  <span className='sintoma'>Sintoma cuatro {swelling} (x)</span>
+                                  <span className='sintoma'>Hinchazon {swelling}</span>
+                                  {swelling ? <FaCheckCircle className="icon-true" /> : <FaTimesCircle className="icon-false" />}
                               </div>
                               <div className="iconUser">
                                   <a href={'/status'}>
