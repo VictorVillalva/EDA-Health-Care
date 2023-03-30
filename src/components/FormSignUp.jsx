@@ -196,7 +196,7 @@ function FormSignUp(props) {
                             required
                         />
 
-                        <label htmlFor="apellidosE">Apellidos:</label>
+                        <label htmlFor="apellidos">Apellidos:</label>
                         <input
                             type="text"
                             id="apellidos-contacto"
@@ -206,7 +206,7 @@ function FormSignUp(props) {
                             required
                         />
 
-                        <label htmlFor="telefonoE">Número telefónico:</label>
+                        <label htmlFor="telefono">Número telefónico:</label>
                         <input
                             type="tel"
                             id="telefono-contacto"
@@ -216,7 +216,7 @@ function FormSignUp(props) {
                             required
                         />
 
-                        <label htmlFor="emailE">Correo electrónico:</label>
+                        <label htmlFor="email">Correo electrónico:</label>
                         <input
                             type="email"
                             id="email-contacto"
