@@ -35,7 +35,7 @@ function App() {
                             <Route path={'/userPage'} element={<UserPage/>}/>
                             <Route path={'/userHome'} element={<HomePage/>}></Route>
                             <Route path={'/test'} element={<FormDiagnosticPage />}/>
-                            <Route path={'/status'} element={<EstatusDiagnostico/>}/>
+                            <Route path={'/status'} element={<EstatusDiagnosticoPage/>}/>
                         </Routes>
                     </TokenDataContext>
                 </UserDataContext>
