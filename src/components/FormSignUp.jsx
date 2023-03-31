@@ -3,9 +3,13 @@ import '../assets/Styles/formSignUp.css';
 import '../assets/Styles/formLogin.css';
 import ButtonEntrar from "../Atom/ButtonEntrar.jsx";
 import {useState} from "react";
+import axios from "axios";
+import Swal from "sweetalert2";
+import {useNavigate} from "react-router-dom";
 
 
 function FormSignUp(props) {
+    const navigate= useNavigate();
 
     const [formData, setFormData] = useState({
         nombre: '',
@@ -45,8 +49,43 @@ function FormSignUp(props) {
         //     return
         // }
         // setError(false);
+        axios.post('https://healthcares.ddns.net/auth/signUp',{
+            name:formData.nombre,
+            lastName:formData.apellidos,
+            gender:formData.genero,
+            dateOfBirth:formData.fechaNacimiento,
+            weight:formData.peso,
+            height:formData.altura,
+            phoneNumber:formData.telefono,
+            email:formData.email,
+            password:formData.contrasena,
+            primaryDoctorId:'',
+            photoURL:'',
+            role:'patient',
+            emergencyContact:{
+                contactName:formData.nombreContacto,
+                contactPhoneNumber:formData.telefonoContacto,
+                contactEmail: formData.emailContacto
+        }
+        }).then(function (res) {
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Your work has been saved',
+                showConfirmButton: false,
+                timer: 1500
+            })
+            navigate('/login')
+        }).catch(function (err) {
+            console.log(err)
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong!',
+                footer: '<a href="">Why do I have this issue?</a>'
+            })
+        })
 
-        console.log('yea')
     };
 
         //show "clave doctor"

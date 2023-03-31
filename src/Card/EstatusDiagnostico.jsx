@@ -9,6 +9,7 @@ import ProgressBar from 'react-bootstrap/ProgressBar';
 import {useNavigate} from "react-router-dom";
 import axios from "axios";
 import {UserContext} from "../context/UserContext.jsx";
+import Swal from "sweetalert2";
 
 
 const EstatusDiagnostico = () => {
@@ -27,6 +28,29 @@ const EstatusDiagnostico = () => {
             console.log(err)
         })
     },[])
+
+    const sendNotification=()=>{
+
+        axios.post('https://healthcares.ddns.net/sns/sendNotification',{
+            message:"paciente en riesgo, ingrese a su centro de atencion medico mas cercano",
+            subject:"ALERTA"
+        },).then(function (res) {
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Your work has been saved',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        }).catch(function (err) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Algo a salido mal,intente de nuevo!',
+                footer: '<a href="">Why do I have this issue?</a>'
+            })
+        })
+    }
 
     return (
     <div className='container cardEstatus'>
@@ -66,8 +90,8 @@ const EstatusDiagnostico = () => {
                 <h5 className='textNotificacion'>Desea notificar la situacion?</h5>
             </div>
             <div className="buttonContainer">
-                <button className='button-si'>Si</button>
-                <button className='button-no'>No</button>
+                <button className='button-si' onClick={sendNotification}>Si</button>
+                <button className='button-no' onClick={()=>navigate('/userHome')}>No</button>
             </div>
         </div>
         <div className="row">
