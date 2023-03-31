@@ -1,6 +1,9 @@
 .perfilUser{
     margin-top: 3%;
 }
+.textEstatusDelPaciente{
+    margin-left: 5%;
+}
 .diagnosticoDiv{
     display: flex;
     flex-direction: column;

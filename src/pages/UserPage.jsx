@@ -39,7 +39,7 @@ function UserPage(props) {
             <section className="userContent">
                 <div className="container userContentContainer">
                     <div className="health-status">
-                        <span>Estatus de Salud</span>
+                        <span className='estatusSaludText'>Estatus de Salud</span>
                         <div className="health-status-component">
                             <HealthStatus />
                         </div>
