@@ -1,11 +1,13 @@
 //Hooks
 import { useState } from 'react';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
-
+//Components
+import ProgressBar from 'react-bootstrap/ProgressBar';
 //CSS
 import '../assets/Styles/estatusDiagnostico.css';
 import '../assets/Styles/button10.css';
-import ProgressBar from 'react-bootstrap/ProgressBar';
+import { bootstrapUtils } from 'react-bootstrap/lib/utils';
+
 
 
 const EstatusDiagnostico = () => {
